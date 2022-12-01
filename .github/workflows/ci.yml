@@ -1,0 +1,39 @@
+name: 'Build & Release'
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    name: Build & release on Node ${{ matrix.node }}
+    runs-on: 'ubuntu-latest'
+
+    strategy:
+      matrix:
+        node: ['16.x']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.0.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Use Node ${{ matrix.node }}
+        uses: actions/setup-node@v3.0.0
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies (with cache)
+        uses: bahmutov/npm-install@v1
+
+      - name: Build web app
+        run: yarn build
+
+      - name: Release web app
+        run: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_COMMITTER_NAME: ${{ secrets.GIT_NAME }}
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_EMAIL }}

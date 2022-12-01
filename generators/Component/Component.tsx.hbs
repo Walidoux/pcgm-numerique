@@ -1,0 +1,13 @@
+import classNames from 'classnames'
+
+interface {{ properCase name }}Props {
+  className?: string
+}
+
+export const {{ properCase name }}: React.FC<{{ properCase name }}Props> = ({
+  className
+}) => {
+  return (
+    <div className={classNames(className, '')}></div>
+  )
+}

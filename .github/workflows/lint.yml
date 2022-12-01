@@ -1,0 +1,32 @@
+name: 'Linting code'
+
+on:
+  push:
+    branches: ['develop']
+  pull_request:
+    branches: ['develop', 'main']
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3.0.0
+      - uses: actions/setup-node@v3.0.0
+        with:
+          node-version: 16.x
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Check types
+        run: yarn check-types
+
+      - name: Linting prettier
+        run: yarn lint:prettier
+
+      - name: Checking editorconfig
+        run: yarn lint:editorconfig
+
+      - name: Linting commit
+        run: yarn commitlint -- --to '${{ github.sha }}'

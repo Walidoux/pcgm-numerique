@@ -1,0 +1,137 @@
+{
+  "name": "pcgm-num",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "postinstall": "husky install",
+    "commitlint": "commitlint",
+    "release": "semantic-release",
+    "generate": "plop",
+    "semantic-release": "release --branches main",
+    "check-types": "tsc --noemit",
+    "lint:editorconfig": "editorconfig-checker",
+    "lint:prettier": "prettier \".\" --check --ignore-unknown '!**/*.hbs' --ignore-path \".gitignore\""
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.2.0",
+    "classnames": "^2.3.2",
+    "framer-motion": "^7.6.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
+    "@tauri-apps/cli": "^1.2.1",
+    "@types/node": "^18.11.10",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^2.2.0",
+    "@walidoux/eslint-config": "^1.0.1",
+    "@walidoux/prettier-config": "^1.0.0",
+    "autoprefixer": "^10.4.13",
+    "editorconfig-checker": "^4.0.2",
+    "eslint": "^8.28.0",
+    "husky": "^8.0.2",
+    "i18next": "^22.0.6",
+    "nano-staged": "^0.8.0",
+    "plop": "^3.1.1",
+    "postcss": "^8.4.19",
+    "prettier": "^2.8.0",
+    "prettier-plugin-tailwindcss": "^0.2.0",
+    "react-i18next": "^12.0.0",
+    "semantic-release": "^19.0.5",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Walidoux/pcgm-numerique.git"
+  },
+  "prettier": "@walidoux/prettier-config",
+  "eslintConfig": {
+    "extends": [
+      "@walidoux/eslint-config"
+    ],
+    "ignorePatterns": [
+      "out",
+      "**/*.config.js",
+      "**/*.d.ts",
+      "plopfile.js"
+    ],
+    "rules": {
+      "@next/next/no-img-element": "off"
+    }
+  },
+  "nano-staged": {
+    "*": [
+      "editorconfig-checker"
+    ],
+    "**/*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,jsonc,yml,yaml,md,mdx}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "nano-staged"
+    }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "docs/CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "docs/CHANGELOG.md"
+          ]
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "message": "chore(release): ${nextRelease.version} [skip ci]"
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  }
+}
