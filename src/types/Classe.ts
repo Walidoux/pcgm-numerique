@@ -18,8 +18,8 @@ export type ClasseNumsRefs<T extends number> =
   | FixedLength<number, T>
   | Array<FixedLength<number, T>>
 
-interface DefaultData_NumRefTo<K extends number> {
-  titre: string
+export interface DefaultData_NumRefTo<K extends number> {
+  title: string
   numero: ClasseNumsRefs<K>
 }
 
