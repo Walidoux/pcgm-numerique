@@ -17,6 +17,8 @@
     "lint:prettier": "prettier \".\" --check --ignore-unknown '!**/*.hbs' --ignore-path \".gitignore\""
   },
   "dependencies": {
+    "@fontsource/inter": "^4.5.14",
+    "@fontsource/poppins": "^4.5.10",
     "@tauri-apps/api": "^1.2.0",
     "classnames": "^2.3.2",
     "framer-motion": "^7.6.18",
@@ -47,6 +49,7 @@
     "prettier": "^2.8.0",
     "prettier-plugin-tailwindcss": "^0.2.0",
     "react-i18next": "^12.0.0",
+    "react-icons": "^4.7.1",
     "semantic-release": "^19.0.5",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.3",
