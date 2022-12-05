@@ -1014,8 +1014,853 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
         }
       ]
     },
-    3: { title: '', numero: [nbClasse], rubriques: [] },
-    4: { title: '', numero: [nbClasse], rubriques: [] },
+    3: {
+      title: "Comptes d'actifs circulant (Hors trésorerie)",
+      numero: [nbClasse],
+      rubriques: [
+        {
+          title: 'Stocks',
+          numero: [nbClasse, 1],
+          postes: [
+            {
+              title: 'Marchandises',
+              numero: [nbClasse, 1, 1],
+              comptes: [
+                {
+                  title: 'Marchandises (groupe A)',
+                  numero: [nbClasse, 1, 1, 1]
+                },
+                {
+                  title: 'Marchandises (groupe B)',
+                  numero: [nbClasse, 1, 1, 2]
+                },
+                {
+                  title: 'Marchandises en cours de route',
+                  numero: [nbClasse, 1, 1, 6]
+                },
+                {
+                  title: 'Autres marchandises',
+                  numero: [nbClasse, 1, 1, 8]
+                }
+              ]
+            },
+            {
+              title: 'Matières et fournitures consommables',
+              numero: [nbClasse, 1, 2],
+              comptes: [
+                {
+                  title: 'Matières premières',
+                  numero: [nbClasse, 1, 2, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Matières premières (groupe A)',
+                      numero: [nbClasse, 1, 2, 1, 1]
+                    },
+                    {
+                      title: 'Matières premières (groupe B)',
+                      numero: [nbClasse, 1, 2, 1, 2]
+                    }
+                  ]
+                },
+                {
+                  title: 'Matières et fournitures consommables',
+                  numero: [nbClasse, 1, 2, 2],
+                  sous_comptes: [
+                    {
+                      title: 'Matières consommables (groupe A)',
+                      numero: [nbClasse, 1, 2, 2, 1]
+                    },
+                    {
+                      title: 'Matières consommables (groupe B)',
+                      numero: [nbClasse, 1, 2, 2, 2]
+                    },
+                    {
+                      title: 'Combustibles',
+                      numero: [nbClasse, 1, 2, 2, 3]
+                    },
+                    {
+                      title: "Produits d'entretiens",
+                      numero: [nbClasse, 1, 2, 2, 4]
+                    },
+                    {
+                      title: "Fournitures d'atelier et d'usine",
+                      numero: [nbClasse, 1, 2, 2, 5]
+                    },
+                    {
+                      title: 'Fournitures de magasin',
+                      numero: [nbClasse, 1, 2, 2, 6]
+                    },
+                    {
+                      title: 'Fournitures de bureau',
+                      numero: [nbClasse, 1, 2, 2, 7]
+                    }
+                  ]
+                },
+                {
+                  title: 'Emballages',
+                  numero: [nbClasse, 1, 2, 3],
+                  sous_comptes: [
+                    {
+                      title: 'Emballages perdus',
+                      numero: [nbClasse, 1, 2, 3, 1]
+                    },
+                    {
+                      title: 'Emballages récupérables non identifiable',
+                      numero: [nbClasse, 1, 2, 3, 2]
+                    },
+                    {
+                      title: 'Emballages à usage mixte',
+                      numero: [nbClasse, 1, 2, 3, 3]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Matières et fournitures consommables en cours de route',
+                  numero: [nbClasse, 1, 2, 6]
+                },
+                {
+                  title: 'Autres matières et fournitures consommables',
+                  numero: [nbClasse, 1, 2, 8]
+                }
+              ]
+            },
+            {
+              title: 'Produits en cours',
+              numero: [nbClasse, 1, 3],
+              comptes: [
+                {
+                  title: 'Bien en cours',
+                  numero: [nbClasse, 1, 3, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Biens produits en cours',
+                      numero: [nbClasse, 1, 3, 1, 1]
+                    },
+                    {
+                      title: 'Biens intermédiaires en cours',
+                      numero: [nbClasse, 1, 3, 1, 2]
+                    },
+                    {
+                      title: 'Biens résiduels en cours',
+                      numero: [nbClasse, 1, 3, 1, 7]
+                    }
+                  ]
+                },
+                {
+                  title: 'Services en cours',
+                  numero: [nbClasse, 1, 3, 4],
+                  sous_comptes: [
+                    {
+                      title: 'Travaux en cours',
+                      numero: [nbClasse, 1, 3, 4, 1]
+                    },
+                    {
+                      title: 'Études en cours',
+                      numero: [nbClasse, 1, 3, 4, 2]
+                    },
+                    {
+                      title: 'Prestations en cours',
+                      numero: [nbClasse, 1, 3, 4, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Autres produits en cours',
+                  numero: [nbClasse, 1, 3, 8]
+                }
+              ]
+            },
+            {
+              title: 'Produits intermédiaires et produit résiduels',
+              numero: [nbClasse, 1, 4],
+              comptes: [
+                {
+                  title: 'Produits intermédiaires',
+                  numero: [nbClasse, 1, 4, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Produits intermédiaires (groupe A)',
+                      numero: [nbClasse, 1, 4, 1, 1]
+                    },
+                    {
+                      title: 'Produits intermédiaires (groupe B)',
+                      numero: [nbClasse, 1, 4, 1, 2]
+                    }
+                  ]
+                },
+                {
+                  title: 'Produits résiduels (ou matières de récupération)',
+                  numero: [nbClasse, 1, 4, 5],
+                  sous_comptes: [
+                    { title: 'Déchets', numero: [nbClasse, 1, 4, 5, 1] },
+                    { title: 'Rebuts', numero: [nbClasse, 1, 4, 5, 2] },
+                    {
+                      title: 'Matières de récupération',
+                      numero: [nbClasse, 1, 4, 5, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Autres produits interm. et prod. résiduels',
+                  numero: [nbClasse, 1, 4, 8]
+                }
+              ]
+            },
+            {
+              title: 'Produits finis',
+              numero: [nbClasse, 1, 5],
+              comptes: [
+                {
+                  title: 'Produits finis (groupe A)',
+                  numero: [nbClasse, 1, 5, 1]
+                },
+                {
+                  title: 'Produits finis (groupe B)',
+                  numero: [nbClasse, 1, 5, 2]
+                },
+                {
+                  title: 'Produits finis en cours de route',
+                  numero: [nbClasse, 1, 5, 6]
+                },
+                {
+                  title: 'Autres Produits finis',
+                  numero: [nbClasse, 1, 5, 8]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: "Créances de l'actif circulant",
+          numero: [nbClasse, 4],
+          postes: [
+            {
+              title: 'Fournisseurs débiteurs, avances et acomptes',
+              numero: [nbClasse, 4, 1],
+              comptes: [
+                {
+                  title:
+                    "Fournisseurs - avances et acomptes versés sur commandes d'exploitation",
+                  numero: [nbClasse, 4, 1, 1]
+                },
+                {
+                  title:
+                    'Fournisseurs - créances pour emballages et matériel à rendre',
+                  numero: [nbClasse, 4, 1, 3]
+                },
+                {
+                  title:
+                    'Rabais, remises et ristournes à obtenir - avoirs non encore reçus',
+                  numero: [nbClasse, 4, 1, 7]
+                },
+                {
+                  title: 'Autres fournisseurs débiteurs',
+                  numero: [nbClasse, 4, 1, 8]
+                }
+              ]
+            },
+            {
+              title: 'Clients et comptes rattachés',
+              numero: [nbClasse, 4, 2],
+              comptes: [
+                {
+                  title: 'Clients',
+                  numero: [nbClasse, 4, 2, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Clients - catégorie A',
+                      numero: [nbClasse, 4, 2, 1, 1]
+                    },
+                    {
+                      title: 'Clients - catégorie B',
+                      numero: [nbClasse, 4, 2, 1, 2]
+                    }
+                  ]
+                },
+                {
+                  title: 'Clients - retenues de garanties',
+                  numero: [nbClasse, 4, 2, 3]
+                },
+                {
+                  title: 'Clients douteux ou litigieux',
+                  numero: [nbClasse, 4, 2, 4]
+                },
+                {
+                  title: 'Clients - effets à recevoir',
+                  numero: [nbClasse, 4, 2, 5]
+                },
+                {
+                  title:
+                    'Clients - factures à établir et créances sur travaux non encore facturables',
+                  numero: [nbClasse, 4, 2, 7],
+                  sous_comptes: [
+                    {
+                      title: 'Clients - factures à établir',
+                      numero: [nbClasse, 4, 2, 7, 1]
+                    },
+                    {
+                      title: 'Créances sur travaux non encore facturables',
+                      numero: [nbClasse, 4, 2, 7, 2]
+                    }
+                  ]
+                },
+                {
+                  title: 'Autres clients et comptes rattachés',
+                  numero: [nbClasse, 4, 2, 8]
+                }
+              ]
+            },
+            {
+              title: 'Personnel - débiteur',
+              numero: [nbClasse, 4, 3],
+              comptes: [
+                {
+                  title: 'Avances et acomptes au personnel',
+                  numero: [nbClasse, 4, 3, 1]
+                },
+                {
+                  title: 'Peronnel - autres débiteurs',
+                  numero: [nbClasse, 4, 3, 8]
+                }
+              ]
+            },
+            {
+              title: 'État - débiteur',
+              numero: [nbClasse, 4, 5],
+              comptes: [
+                {
+                  title: 'Subventions à recevoir',
+                  numero: [nbClasse, 4, 5, 1],
+                  sous_comptes: [
+                    {
+                      title: "Subventions d'investissement à recevoir",
+                      numero: [nbClasse, 4, 5, 1, 1]
+                    },
+                    {
+                      title: "Subventions d'exploitation à recevoir",
+                      numero: [nbClasse, 4, 5, 1, 2]
+                    },
+                    {
+                      title: "Subventions d'équilibre à recevoir",
+                      numero: [nbClasse, 4, 5, 1, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Acomptes sur impôts sur les résultats',
+                  numero: [nbClasse, 4, 5, 3]
+                },
+                {
+                  title: 'État - T.V.A récupérable',
+                  numero: [nbClasse, 4, 5, 5],
+                  sous_comptes: [
+                    {
+                      title: 'État - T.V.A récupérable sur immobilisations',
+                      numero: [nbClasse, 4, 5, 5, 1]
+                    },
+                    {
+                      title: 'État - T.V.A récupérable sur charges',
+                      numero: [nbClasse, 4, 5, 5, 2]
+                    }
+                  ]
+                },
+                {
+                  title: 'État - Crédits de T.V.A (suivants déclarations)',
+                  numero: [nbClasse, 4, 5, 6]
+                },
+                {
+                  title: 'État - Autres comptes débiteurs',
+                  numero: [nbClasse, 4, 5, 8]
+                }
+              ]
+            },
+            {
+              title: "Comptes d'associés - débiteurs",
+              numero: [nbClasse, 4, 6],
+              comptes: [
+                {
+                  title: "Associés - comptes d'apport en société",
+                  numero: [nbClasse, 4, 6, 1]
+                },
+                {
+                  title: 'Actionnaires - capital souscrit et appelé non versé',
+                  numero: [nbClasse, 4, 6, 2]
+                },
+                {
+                  title: 'Comptes courants des associés - débiteurs',
+                  numero: [nbClasse, 4, 6, 3]
+                },
+                {
+                  title: 'Associés - opérations faites en commun',
+                  numero: [nbClasse, 4, 6, 4]
+                },
+                {
+                  title: "Créances rattachées aux comptes d'associés",
+                  numero: [nbClasse, 4, 6, 7]
+                },
+                {
+                  title: "Autres comptes d'associés - débiteurs",
+                  numero: [nbClasse, 4, 6, 8]
+                }
+              ]
+            },
+            {
+              title: 'Autres débiteurs',
+              numero: [nbClasse, 4, 8],
+              comptes: [
+                {
+                  title: "Créances sur cessions d'immobilisations",
+                  numero: [nbClasse, 4, 8, 1]
+                },
+                {
+                  title: "Créances sur cessions d'élements d'actif circulant",
+                  numero: [nbClasse, 4, 8, 2]
+                },
+                {
+                  title: 'Créances rattachés aux autres débiteurs',
+                  numero: [nbClasse, 4, 8, 7]
+                },
+                {
+                  title: 'Divers débiteurs',
+                  numero: [nbClasse, 4, 8, 8]
+                }
+              ]
+            },
+            {
+              title: 'Comptes de régularisation - actif',
+              numero: [nbClasse, 4, 9],
+              comptes: [
+                {
+                  title: "Charges constatées d'avance",
+                  numero: [nbClasse, 4, 9, 1]
+                },
+                {
+                  title: 'Intérêts courus et non échus à percevoir',
+                  numero: [nbClasse, 4, 9, 3]
+                },
+                {
+                  title: 'Comptes de répartition périodique des charges',
+                  numero: [nbClasse, 4, 9, 5]
+                },
+                {
+                  title: "Comptes transitoires ou d'attente - débiteurs",
+                  numero: [nbClasse, 4, 9, 7]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Titres et valeurs de placement',
+          numero: [nbClasse, 5],
+          postes: [
+            {
+              title: 'Titres et valeurs de placement',
+              numero: [nbClasse, 5, 0],
+              comptes: [
+                {
+                  title: 'Actions, partie libérée',
+                  numero: [nbClasse, 5, 0, 1]
+                },
+                {
+                  title: 'Actions, partie non libérée',
+                  numero: [nbClasse, 5, 0, 2]
+                },
+                { title: 'Obligations', numero: [nbClasse, 5, 0, 4] },
+                {
+                  title: 'Bons de caisse et bons du Trésor',
+                  numero: [nbClasse, 5, 0, 6],
+                  sous_comptes: [
+                    { title: 'Bons de caisse', numero: [nbClasse, 5, 0, 6, 1] },
+                    { title: 'Bons du trésor', numero: [nbClasse, 5, 0, 6, 2] }
+                  ]
+                },
+                {
+                  title: 'Autres titres et valeurs de placement similaires',
+                  numero: [nbClasse, 5, 0, 8]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Écarts de conversion-actif (élément circulants)',
+          numero: [nbClasse, 7],
+          postes: [
+            {
+              title: 'Écarts de conversion-actif (élément circulants)',
+              numero: [nbClasse, 7, 0],
+              comptes: [
+                {
+                  title: 'Diminution des créances circulantes',
+                  numero: [nbClasse, 7, 0, 1]
+                },
+                {
+                  title: 'Augmentation des dette circulantes',
+                  numero: [nbClasse, 7, 0, 2]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title:
+            "Provisions pour dépréciation des comptes de l'actif circulant",
+          numero: [nbClasse, 9],
+          postes: [
+            {
+              title: 'Provisions pour dépréciation des stocks',
+              numero: [nbClasse, 9, 1],
+              comptes: [
+                {
+                  title: 'Provisions pour dépréciation des marchandises',
+                  numero: [nbClasse, 9, 1, 1]
+                },
+                {
+                  title:
+                    'Provisions pour dépréciation des matières et fournitures',
+                  numero: [nbClasse, 9, 1, 2]
+                },
+                {
+                  title: 'Provisions pour dépréciation des produits en cours',
+                  numero: [nbClasse, 9, 1, 3]
+                },
+                {
+                  title:
+                    'Provisions pour dépréciation des produits intermédiaires',
+                  numero: [nbClasse, 9, 1, 4]
+                },
+                {
+                  title: 'Provisions pour dépréciation des produits finis',
+                  numero: [nbClasse, 9, 1, 5]
+                }
+              ]
+            },
+            {
+              title:
+                "Provisions pour dépréciation des créances de l'actif circulant",
+              numero: [nbClasse, 9, 4],
+              comptes: [
+                {
+                  title:
+                    'Provisions pour dépréciation - fournisseurs débiteurs, avances et acomptes',
+                  numero: [nbClasse, 9, 4, 1]
+                },
+                {
+                  title:
+                    'Provisions pour dépréciation des clients et comptes rattachés',
+                  numero: [nbClasse, 9, 4, 2]
+                },
+                {
+                  title: 'Provisions pour dépréciation du personnel - débiteur',
+                  numero: [nbClasse, 9, 4, 3]
+                },
+                {
+                  title:
+                    "Provisions pour dépréciation des comptes d'associés débiteurs",
+                  numero: [nbClasse, 9, 4, 6]
+                },
+                {
+                  title: 'Provisions pour dépréciation des autres débiteurs',
+                  numero: [nbClasse, 9, 4, 8]
+                }
+              ]
+            },
+            {
+              title:
+                'Provisions pour dépréciation des titres et valeurs de placement',
+              numero: [nbClasse, 9, 5],
+              comptes: [
+                {
+                  title:
+                    'Provisions pour dépréciation des titres et valeurs de placement',
+                  numero: [nbClasse, 9, 5, 0]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    4: {
+      title: 'Comptes de passif circulant',
+      numero: [nbClasse],
+      rubriques: [
+        {
+          title: 'Dettes du passif circulant',
+          numero: [nbClasse, 4],
+          postes: [
+            {
+              title: 'Fournisseurs et comptes rattachés',
+              numero: [nbClasse, 4, 1],
+              comptes: [
+                {
+                  title: 'Fournisseurs',
+                  numero: [nbClasse, 4, 1, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Fournisseurs - catégorie A',
+                      numero: [nbClasse, 4, 1, 1, 1]
+                    },
+                    {
+                      title: 'Fournisseurs - catégorie B',
+                      numero: [nbClasse, 4, 1, 1, 2]
+                    }
+                  ]
+                },
+                {
+                  title: 'Fournisseurs - retenues de garantie',
+                  numero: [nbClasse, 4, 1, 3]
+                },
+                {
+                  title: 'Fournisseurs - effets à payer',
+                  numero: [nbClasse, 4, 1, 5]
+                },
+                {
+                  title: 'Fournisseurs - factures non parvenues',
+                  numero: [nbClasse, 4, 1, 7]
+                },
+                {
+                  title: 'Autrs fournisseurs et comptes rattachés',
+                  numero: [nbClasse, 4, 1, 8]
+                }
+              ]
+            },
+            {
+              title: 'Clients créditeurs, avances et acomptes',
+              numero: [nbClasse, 4, 2],
+              comptes: [
+                {
+                  title:
+                    'Clients - avances et acomptes reçus sur commandes en cours',
+                  numero: [nbClasse, 4, 2, 1]
+                },
+                {
+                  title:
+                    'Clients - dettes pour emballages et matériel consignés',
+                  numero: [nbClasse, 4, 2, 5]
+                },
+                {
+                  title:
+                    'Rabais, remises et ristournes à accorder - avoirs à établir',
+                  numero: [nbClasse, 4, 2, 7]
+                },
+                {
+                  title: 'Autres clients créditeurs',
+                  numero: [nbClasse, 4, 2, 8]
+                }
+              ]
+            },
+            {
+              title: 'Personnel - créditeur',
+              numero: [nbClasse, 4, 3],
+              comptes: [
+                {
+                  title: 'Rémunérations dues au personnel',
+                  numero: [nbClasse, 4, 3, 1]
+                },
+                {
+                  title: 'Dépôts du personnel créditeurs',
+                  numero: [nbClasse, 4, 3, 3]
+                },
+                {
+                  title: 'Oppositions sur salaires',
+                  numero: [nbClasse, 4, 3, 4]
+                },
+                {
+                  title: 'Charges de personnel à payer',
+                  numero: [nbClasse, 4, 3, 7]
+                },
+                {
+                  title: 'Personnel - autres créditeurs',
+                  numero: [nbClasse, 4, 3, 8]
+                }
+              ]
+            },
+            {
+              title: 'Organismes sociaux',
+              numero: [nbClasse, 4, 4],
+              comptes: [
+                {
+                  title: 'Caisse Nationale de la Sécurité sociale',
+                  numero: [nbClasse, 4, 4, 1]
+                },
+                {
+                  title: 'Caisses de retraite',
+                  numero: [nbClasse, 4, 4, 3]
+                },
+                {
+                  title: 'Mutuelles',
+                  numero: [nbClasse, 4, 4, 5]
+                },
+                {
+                  title: 'Charges sociales à payer',
+                  numero: [nbClasse, 4, 4, 7]
+                },
+                {
+                  title: 'Autres organismes sociaux',
+                  numero: [nbClasse, 4, 4, 8]
+                }
+              ]
+            },
+            {
+              title: 'État - créditeur',
+              numero: [nbClasse, 4, 5],
+              comptes: [
+                {
+                  title: 'État, impôts, taxes et assimilés',
+                  numero: [nbClasse, 4, 5, 2],
+                  sous_comptes: [
+                    {
+                      title: "État, taxe urbaine et taxe d'édilité",
+                      numero: [nbClasse, 4, 5, 2, 1]
+                    },
+                    {
+                      title: 'État, patente',
+                      numero: [nbClasse, 4, 5, 2, 2]
+                    },
+                    {
+                      title: 'État, P.T.S et P.S.N',
+                      numero: [nbClasse, 4, 5, 2, 5]
+                    }
+                  ]
+                },
+                {
+                  title: 'État, impôts sur les résultats',
+                  numero: [nbClasse, 4, 5, 3]
+                },
+                {
+                  title: 'État, T.V.A. facturée',
+                  numero: [nbClasse, 4, 5, 5]
+                },
+                {
+                  title: 'État, T.V.A. due (suivant déclarations)',
+                  numero: [nbClasse, 4, 5, 6]
+                },
+                {
+                  title: 'État, impôts et taxes à payer',
+                  numero: [nbClasse, 4, 5, 7]
+                },
+                {
+                  title: 'État - Autres comptes créditeurs',
+                  numero: [nbClasse, 4, 5, 8]
+                }
+              ]
+            },
+            {
+              title: 'Autres créanciers',
+              numero: [nbClasse, 4, 8],
+              comptes: [
+                {
+                  title: "Dettes sur acquisitions d'immobilisations",
+                  numero: [nbClasse, 4, 8, 1]
+                },
+                {
+                  title:
+                    'Dettes sur acquisition de titres et valeurs de placement',
+                  numero: [nbClasse, 4, 8, 3]
+                },
+                {
+                  title: 'Obligations échues à rembourser',
+                  numero: [nbClasse, 4, 8, 4]
+                },
+                {
+                  title: 'Obligations, coupons à payer',
+                  numero: [nbClasse, 4, 8, 5]
+                },
+                {
+                  title: 'Dettes rattachées aux autres créanciers',
+                  numero: [nbClasse, 4, 8, 7]
+                },
+                {
+                  title: 'Divers créanciers',
+                  numero: [nbClasse, 4, 8, 8]
+                }
+              ]
+            },
+            {
+              title: 'Comptes de régularisaiton - passif',
+              numero: [nbClasse, 4, 9],
+              comptes: [
+                {
+                  title: "Produits contastés d'avance",
+                  numero: [nbClasse, 4, 9, 1]
+                },
+                {
+                  title: 'Intérêts courus et non échus à payer',
+                  numero: [nbClasse, 4, 9, 3]
+                },
+                {
+                  title: 'Comptes de répartition périodique des produits',
+                  numero: [nbClasse, 4, 9, 5]
+                },
+                {
+                  title: "Comptes transitoires ou d'attente - créditeurs",
+                  numero: [nbClasse, 4, 9, 7]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Autres provisions pour risques et charges',
+          numero: [nbClasse, 5],
+          postes: [
+            {
+              title: 'Autres provisions pour risques et charges',
+              numero: [nbClasse, 5, 0],
+              comptes: [
+                {
+                  title: 'Provisions pour litiges',
+                  numero: [nbClasse, 5, 0, 1]
+                },
+                {
+                  title: 'Provisions pour garanties données aux clients',
+                  numero: [nbClasse, 5, 0, 2]
+                },
+                {
+                  title: 'Provisions pour amendes, doubles droits et pénalités',
+                  numero: [nbClasse, 5, 0, 5]
+                },
+                {
+                  title: 'Provisions pour pertes de change',
+                  numero: [nbClasse, 5, 0, 6]
+                },
+                {
+                  title: 'Provisions pour impôts',
+                  numero: [nbClasse, 5, 0, 7]
+                },
+                {
+                  title: 'Autres provisions pour risques et charges',
+                  numero: [nbClasse, 5, 0, 8]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Écarts de conversion - passif (eléments circulants)',
+          numero: [nbClasse, 7],
+          postes: [
+            {
+              title: 'Écarts de conversion - passif (eléments circulants)',
+              numero: [nbClasse, 7, 0],
+              comptes: [
+                {
+                  title: 'Augmentation des créances circulantes',
+                  numero: [nbClasse, 7, 0, 1]
+                },
+                {
+                  title: 'Diminution des dettes circulantes',
+                  numero: [nbClasse, 7, 0, 2]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     5: { title: '', numero: [nbClasse], rubriques: [] },
     6: { title: '', numero: [nbClasse], rubriques: [] },
     7: { title: '', numero: [nbClasse], rubriques: [] },
