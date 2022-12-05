@@ -1015,7 +1015,7 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
       ]
     },
     3: {
-      title: "Comptes d'actifs circulant (Hors trésorerie)",
+      title: "Comptes d'actifs circulant (HT)",
       numero: [nbClasse],
       rubriques: [
         {
@@ -1861,12 +1861,169 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
         }
       ]
     },
-    5: { title: '', numero: [nbClasse], rubriques: [] },
-    6: { title: '', numero: [nbClasse], rubriques: [] },
-    7: { title: '', numero: [nbClasse], rubriques: [] },
-    8: { title: '', numero: [nbClasse], rubriques: [] },
-    9: { title: '', numero: [nbClasse], rubriques: [] },
-    0: { title: '', numero: [nbClasse], rubriques: [] }
+    5: {
+      title: 'Comptes de trésorerie',
+      numero: [nbClasse],
+      rubriques: [
+        {
+          title: 'Trésorerie - actif',
+          numero: [nbClasse, 1],
+          postes: [
+            {
+              title: 'Chèques et valeurs à encaisser',
+              numero: [nbClasse, 1, 1],
+              comptes: [
+                {
+                  title: "Chèques à encaisser ou à l'encaissement",
+                  numero: [nbClasse, 1, 1, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Chèques en portefeuille',
+                      numero: [nbClasse, 1, 1, 1, 1]
+                    },
+                    {
+                      title: "Chèques à l'encaissement",
+                      numero: [nbClasse, 1, 1, 1, 2]
+                    }
+                  ]
+                },
+                {
+                  title: "Effets à encaisser ou à l'encaissement",
+                  numero: [nbClasse, 1, 1, 3],
+                  sous_comptes: [
+                    {
+                      title: 'Effets échus à encaisser',
+                      numero: [nbClasse, 1, 1, 3, 1]
+                    },
+                    {
+                      title: "Effets à l'encaissement",
+                      numero: [nbClasse, 1, 1, 3, 2]
+                    }
+                  ]
+                },
+                {
+                  title: 'Virements de fonds',
+                  numero: [nbClasse, 1, 1, 5]
+                },
+                {
+                  title: 'Autres valeurs à encaisser',
+                  numero: [nbClasse, 1, 1, 8]
+                }
+              ]
+            },
+            {
+              title:
+                'Banques, Trésorerie Générale et Chèques postaux débiteurs',
+              numero: [nbClasse, 1, 4],
+              comptes: [
+                {
+                  title: 'Banques (soldes créditeurs)',
+                  numero: [nbClasse, 1, 4, 1]
+                },
+                {
+                  title: 'Trésorerie Générale',
+                  numero: [nbClasse, 1, 4, 3]
+                },
+                {
+                  title: 'Chèques postaux',
+                  numero: [nbClasse, 1, 4, 6]
+                },
+                {
+                  title:
+                    'Autres établissements financiers et assimilés (soldes débiteurs)',
+                  numero: [nbClasse, 1, 4, 8]
+                }
+              ]
+            },
+            {
+              title: "Caisses, régies d'avances et accréditifs",
+              numero: [nbClasse, 1, 6],
+              comptes: [
+                {
+                  title: 'Caisses',
+                  numero: [nbClasse, 1, 6, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Caisse centrale',
+                      numero: [nbClasse, 1, 6, 1, 1]
+                    },
+                    {
+                      title: 'Caisse (succursale ou agence A)',
+                      numero: [nbClasse, 1, 6, 1, 3]
+                    },
+                    {
+                      title: 'Caisse (succursale ou agence B)',
+                      numero: [nbClasse, 1, 6, 1, 4]
+                    }
+                  ]
+                },
+                {
+                  title: "Régies d'avances et accréditifs",
+                  numero: [nbClasse, 1, 6, 5]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Trésorerie - passif',
+          numero: [nbClasse, 5],
+          postes: [
+            {
+              title: "Crédits d'escompte",
+              numero: [nbClasse, 5, 2],
+              comptes: [
+                { title: "Crédits d'escompte", numero: [nbClasse, 5, 2, 0] }
+              ]
+            },
+            {
+              title: 'Crédits de trésorerie',
+              numero: [nbClasse, 5, 3],
+              comptes: [
+                { title: 'Crédits de trésorerie', numero: [nbClasse, 5, 3, 0] }
+              ]
+            },
+            {
+              title: 'Banques (soldes créditeurs)',
+              numero: [nbClasse, 5, 4],
+              comptes: [
+                {
+                  title: 'Banques (soldes créditeurs)',
+                  numero: [nbClasse, 5, 4, 1]
+                },
+                {
+                  title:
+                    'Autres établissements financiers et assimilés (soldes créditeurs)',
+                  numero: [nbClasse, 5, 4, 8]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Provisions pour dépréciation des comptes de trésorerie',
+          numero: [nbClasse, 9],
+          postes: [
+            {
+              title: 'Provisions pour dépréciation des comptes de trésorerie',
+              numero: [nbClasse, 9, 0],
+              comptes: [
+                {
+                  title:
+                    'Provisions pour dépréciation des comptes de trésorerie',
+                  numero: [nbClasse, 9, 0, 0]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    6: { title: 'Comptes de charges', numero: [nbClasse], rubriques: [] },
+    7: { title: 'Comptes de produits', numero: [nbClasse], rubriques: [] },
+    8: { title: 'Comptes de résultats', numero: [nbClasse], rubriques: [] },
+    9: { title: 'Comptes analytiques', numero: [nbClasse], rubriques: [] },
+    0: { title: 'Comptes spéciaux', numero: [nbClasse], rubriques: [] }
   }
 
   return current[nbClasse]
