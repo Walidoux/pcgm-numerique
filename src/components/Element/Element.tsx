@@ -18,23 +18,25 @@ export const Element: React.FC<ElementProps> = ({
   className
 }) => (
   <div
-    className={classNames(className, 'flex items-center px-8', {
+    className={classNames(className, 'flex items-center px-4', {
       'mt-4 mb-1 font-bold': whichElement === 'poste',
       'cursor-pointer rounded-lg transition hover:bg-gray-200':
         whichElement !== 'poste',
-      'ml-10': whichElement === 'sous_compte'
+      'ml-10 text-blue-500': whichElement === 'sous_compte'
     })}>
     <span
-      className={classNames('block select-none font-poppins', {
-        'w-12': whichElement !== 'poste'
+      className={classNames('select-none self-start font-poppins', {
+        'block w-12': whichElement !== 'poste'
       })}>
       {handleNumRefs != null
         ? handleNumRefs(numero as ClasseNumsRefs<2 | 3>)
         : numero}
-      {(whichElement === 'compte' || whichElement === 'sous_compte') && '.'}
+      {whichElement !== 'poste' && '.'}
     </span>
 
-    {whichElement === 'poste' && <AiOutlineLine className='ml-4' />}
-    <span className='mx-4'>{title}</span>
+    {whichElement === 'poste' && (
+      <AiOutlineLine className='ml-4 mt-1 self-start' />
+    )}
+    <span className='mx-4 w-full'>{title}</span>
   </div>
 )
