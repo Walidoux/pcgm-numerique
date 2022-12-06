@@ -292,11 +292,11 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
               numero: [nbClasse, 6, 0],
               comptes: [
                 {
-                  title: 'Augmentation des créances immoblisées',
+                  title: 'Augmentation des créances immobilisées',
                   numero: [nbClasse, 6, 0, 1]
                 },
                 {
-                  title: 'Augmentation des créances immoblisées',
+                  title: 'Augmentation des créances immobilisées',
                   numero: [nbClasse, 6, 0, 1]
                 }
               ]
@@ -609,7 +609,7 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
                 },
                 {
                   title:
-                    "Avances et acomptes versés sur commandes d'immoblisations corporelles",
+                    "Avances et acomptes versés sur commandes d'immobilisations corporelles",
                   numero: [nbClasse, 3, 9, 7]
                 },
                 {
@@ -628,7 +628,7 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
           ],
           postes: [
             {
-              title: 'Prêts immobiliés',
+              title: 'Prêts immobilisés',
               numero: [nbClasse, 4, 1],
               comptes: [
                 {
@@ -1320,7 +1320,7 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
                   numero: [nbClasse, 4, 3, 1]
                 },
                 {
-                  title: 'Peronnel - autres débiteurs',
+                  title: 'Personnel - autres débiteurs',
                   numero: [nbClasse, 4, 3, 8]
                 }
               ]
@@ -1414,7 +1414,7 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
                   numero: [nbClasse, 4, 8, 1]
                 },
                 {
-                  title: "Créances sur cessions d'élements d'actif circulant",
+                  title: "Créances sur cessions d'éléments d'actif circulant",
                   numero: [nbClasse, 4, 8, 2]
                 },
                 {
@@ -1622,7 +1622,7 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
                   numero: [nbClasse, 4, 1, 7]
                 },
                 {
-                  title: 'Autrs fournisseurs et comptes rattachés',
+                  title: 'Autres fournisseurs et comptes rattachés',
                   numero: [nbClasse, 4, 1, 8]
                 }
               ]
@@ -1780,11 +1780,11 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
               ]
             },
             {
-              title: 'Comptes de régularisaiton - passif',
+              title: 'Comptes de régularisation - passif',
               numero: [nbClasse, 4, 9],
               comptes: [
                 {
-                  title: "Produits contastés d'avance",
+                  title: "Produits contactés d'avance",
                   numero: [nbClasse, 4, 9, 1]
                 },
                 {
@@ -1840,11 +1840,11 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
           ]
         },
         {
-          title: 'Écarts de conversion - passif (eléments circulants)',
+          title: 'Écarts de conversion - passif (éléments circulants)',
           numero: [nbClasse, 7],
           postes: [
             {
-              title: 'Écarts de conversion - passif (eléments circulants)',
+              title: 'Écarts de conversion - passif (éléments circulants)',
               numero: [nbClasse, 7, 0],
               comptes: [
                 {
@@ -2019,7 +2019,673 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
         }
       ]
     },
-    6: { title: 'Comptes de charges', numero: [nbClasse], rubriques: [] },
+    6: {
+      title: 'Comptes de charges',
+      numero: [nbClasse],
+      rubriques: [
+        {
+          title: "Charges d'exploitation",
+          numero: [nbClasse, 1],
+          postes: [
+            {
+              title: 'Achats revendus de marchandises',
+              numero: [nbClasse, 1, 1],
+              comptes: [
+                {
+                  title: 'Achats de marchandises « groupe A »',
+                  numero: [nbClasse, 1, 1, 1]
+                },
+                {
+                  title: 'Achats de marchandises « groupe B »',
+                  numero: [nbClasse, 1, 1, 1]
+                },
+                {
+                  title:
+                    'Variation des stocks de marchandises des exercices antérieurs',
+                  numero: [nbClasse, 1, 1, 8]
+                },
+                {
+                  title:
+                    'Rabais, remises et ristournes obtenus sur achats de marchandises',
+                  numero: [nbClasse, 1, 1, 9]
+                }
+              ]
+            },
+            {
+              title: 'Achats consommés de matières et fournitures',
+              numero: [nbClasse, 1, 2],
+              comptes: [
+                {
+                  title: 'Achats de matières premières',
+                  numero: [nbClasse, 1, 2, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Achats de matières premières A',
+                      numero: [nbClasse, 1, 2, 1, 1]
+                    },
+                    {
+                      title: 'Achats de matières premières B',
+                      numero: [nbClasse, 1, 2, 1, 2]
+                    }
+                  ]
+                },
+                {
+                  title: 'Achats de matières et fournitures consommables',
+                  numero: [nbClasse, 1, 2, 2],
+                  sous_comptes: [
+                    {
+                      title: 'Achats de matières et fournitures A',
+                      numero: [nbClasse, 1, 2, 2, 1]
+                    },
+                    {
+                      title: 'Achats de matières et fournitures B',
+                      numero: [nbClasse, 1, 2, 2, 2]
+                    },
+                    {
+                      title: 'Achats de combustibles',
+                      numero: [nbClasse, 1, 2, 2, 3]
+                    },
+                    {
+                      title: "Achats de produits d'entretien",
+                      numero: [nbClasse, 1, 2, 2, 4]
+                    },
+                    {
+                      title: "Achats de fournitures d'atelier et d'usine",
+                      numero: [nbClasse, 1, 2, 2, 5]
+                    },
+                    {
+                      title: 'Achats de fournitures de magasin',
+                      numero: [nbClasse, 1, 2, 2, 6]
+                    },
+                    {
+                      title: 'Achats de fournitures de bureau',
+                      numero: [nbClasse, 1, 2, 2, 7]
+                    }
+                  ]
+                },
+                {
+                  title: "Achats d'emballages",
+                  numero: [nbClasse, 1, 2, 3],
+                  sous_comptes: [
+                    {
+                      title: "Achats d'emballages perdus",
+                      numero: [nbClasse, 1, 2, 3, 1]
+                    },
+                    {
+                      title:
+                        "Achats d'emballages récupérables non identifiables",
+                      numero: [nbClasse, 1, 2, 3, 2]
+                    },
+                    {
+                      title: "Achats d'emballages à usage mixte",
+                      numero: [nbClasse, 1, 2, 3, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Variation des stocks de matières et fournitures',
+                  numero: [nbClasse, 1, 2, 4],
+                  sous_comptes: [
+                    {
+                      title: 'Variation des stocks de matières premières',
+                      numero: [nbClasse, 1, 2, 4, 1]
+                    },
+                    {
+                      title:
+                        'Variation des stocks de matières et fournitures consommables',
+                      numero: [nbClasse, 1, 2, 4, 2]
+                    },
+                    {
+                      title: "Variation des stocks d'emballages",
+                      numero: [nbClasse, 1, 2, 4, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Achats non stockés de matières et fournitures',
+                  numero: [nbClasse, 1, 2, 5],
+                  sous_comptes: [
+                    {
+                      title:
+                        'Achats de fournitures non stockables (eau, électricité...)',
+                      numero: [nbClasse, 1, 2, 5, 1]
+                    },
+                    {
+                      title: "Achats de fournitures d'entretien",
+                      numero: [nbClasse, 1, 2, 5, 2]
+                    },
+                    {
+                      title: 'Achats de petit outillage et de petit équipement',
+                      numero: [nbClasse, 1, 2, 5, 3]
+                    },
+                    {
+                      title: 'Achats de fournitures de bureau',
+                      numero: [nbClasse, 1, 2, 5, 4]
+                    }
+                  ]
+                },
+                {
+                  title: 'Achats de travaux, études et prestations de service',
+                  numero: [nbClasse, 1, 2, 6],
+                  sous_comptes: [
+                    {
+                      title: 'Achats de travaux',
+                      numero: [nbClasse, 1, 2, 6, 1]
+                    },
+                    {
+                      title: "Achats d'études",
+                      numero: [nbClasse, 1, 2, 6, 2]
+                    },
+                    {
+                      title: 'Achats des prestations de service',
+                      numero: [nbClasse, 1, 2, 6, 3]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Achats de matières et de fournitures des exercices antérieurs',
+                  numero: [nbClasse, 1, 2, 8]
+                },
+                {
+                  title:
+                    'Rabais, remises et ristournes obtenus sur achats consommés de matières et fournitures',
+                  numero: [nbClasse, 1, 2, 9],
+                  sous_comptes: [
+                    {
+                      title: 'R.R.R obtenus sur achats de matières premières',
+                      numero: [nbClasse, 1, 2, 9, 1]
+                    },
+                    {
+                      title:
+                        'R.R.R obtenus sur achats de matières et fournitures consommables',
+                      numero: [nbClasse, 1, 2, 9, 2]
+                    },
+                    {
+                      title: "R.R.R obtenus sur achats d'emballages",
+                      numero: [nbClasse, 1, 2, 9, 3]
+                    },
+                    {
+                      title: 'R.R.R obtenus sur achats non stockés',
+                      numero: [nbClasse, 1, 2, 9, 5]
+                    },
+                    {
+                      title:
+                        'R.R.R obtenus sur achats de travaux, études et prestations de service',
+                      numero: [nbClasse, 1, 2, 9, 6]
+                    },
+                    {
+                      title:
+                        'R.R.R obtenus sur achats de matières et fournitures des exercices antérieurs',
+                      numero: [nbClasse, 1, 2, 9, 8]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              title: 'Autres charges externes',
+              numero: [
+                [nbClasse, 1, 3],
+                [nbClasse, 1, 4]
+              ],
+              comptes: [
+                {
+                  title: 'Locations et charges locatives',
+                  numero: [nbClasse, 1, 3, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Location de terrains',
+                      numero: [nbClasse, 1, 3, 1, 1]
+                    },
+                    {
+                      title: 'Location de constructions',
+                      numero: [nbClasse, 1, 3, 1, 2]
+                    },
+                    {
+                      title: 'Location matériel et outillage',
+                      numero: [nbClasse, 1, 3, 1, 3]
+                    },
+                    {
+                      title: 'Location mobilier et matériel de bureau',
+                      numero: [nbClasse, 1, 3, 1, 4]
+                    },
+                    {
+                      title: 'Location de matière informatique',
+                      numero: [nbClasse, 1, 3, 1, 5]
+                    },
+                    {
+                      title: 'Location de matériel de transport',
+                      numero: [nbClasse, 1, 3, 1, 6]
+                    },
+                    {
+                      title: 'Malis sur emballages rendus',
+                      numero: [nbClasse, 1, 3, 1, 7]
+                    },
+                    {
+                      title: 'Locations et charges locatives diverses',
+                      numero: [nbClasse, 1, 3, 1, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'Redevances de crédit-bail',
+                  numero: [nbClasse, 1, 3, 2],
+                  sous_comptes: [
+                    {
+                      title: 'Redevances de crédit-bail',
+                      numero: [nbClasse, 1, 3, 2, 1]
+                    }
+                  ]
+                },
+                {
+                  title: 'Entretien et réparations',
+                  numero: [nbClasse, 1, 3, 3],
+                  sous_comptes: [
+                    {
+                      title: 'Entretien et réparations des biens immobiliers',
+                      numero: [nbClasse, 1, 3, 3, 1]
+                    },
+                    {
+                      title: 'Entretien et réparations des biens mobiliers',
+                      numero: [nbClasse, 1, 3, 3, 2]
+                    },
+                    {
+                      title: 'Maintenance',
+                      numero: [nbClasse, 1, 3, 3, 5]
+                    }
+                  ]
+                },
+                {
+                  title: "Primes d'assurances",
+                  numero: [nbClasse, 1, 3, 4],
+                  sous_comptes: [
+                    {
+                      title:
+                        'Assurances multirisques (vol, incendie, responsabilité civile...)',
+                      numero: [nbClasse, 1, 3, 4, 1]
+                    },
+                    {
+                      title: "Assurances - Risques d'exploitation",
+                      numero: [nbClasse, 1, 3, 4, 3]
+                    },
+                    {
+                      title: 'Assurances - Matériel de transport',
+                      numero: [nbClasse, 1, 3, 4, 5]
+                    },
+                    {
+                      title: 'Autres assurances',
+                      numero: [nbClasse, 1, 3, 4, 8]
+                    }
+                  ]
+                },
+                {
+                  title: "Rémunérations du personnel extérieur à l'entreprise",
+                  numero: [nbClasse, 1, 3, 5],
+                  sous_comptes: [
+                    {
+                      title: 'Rémunérations du personnel occasionnel',
+                      numero: [nbClasse, 1, 3, 5, 1]
+                    },
+                    {
+                      title: 'Rémunération du personnel intérimaire',
+                      numero: [nbClasse, 1, 3, 5, 2]
+                    },
+                    {
+                      title:
+                        "Rémunération du personnel détaché ou prêté à l'entreprise",
+                      numero: [nbClasse, 1, 3, 5, 3]
+                    }
+                  ]
+                },
+                {
+                  title: "Rémunérations d'intermédiaires et honoraires",
+                  numero: [nbClasse, 1, 3, 6],
+                  sous_comptes: [
+                    {
+                      title: 'Commissions et courtages',
+                      numero: [nbClasse, 1, 3, 6, 1]
+                    },
+                    { title: 'Honoraires', numero: [nbClasse, 1, 3, 6, 5] },
+                    {
+                      title: "Frais d'actes et de contentieux",
+                      numero: [nbClasse, 1, 3, 6, 7]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Redevances pour brevets, marques, droits et valeurs similaires',
+                  numero: [nbClasse, 1, 3, 7],
+                  sous_comptes: [
+                    {
+                      title: 'Redevances pour brevets',
+                      numero: [nbClasse, 1, 3, 7, 1]
+                    },
+                    {
+                      title: 'Autres redevances',
+                      numero: [nbClasse, 1, 3, 7, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'Études, recherches et documentation',
+                  numero: [nbClasse, 1, 4, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Études générales',
+                      numero: [nbClasse, 1, 4, 1, 1]
+                    },
+                    {
+                      title: 'Recherches',
+                      numero: [nbClasse, 1, 4, 1, 3]
+                    },
+                    {
+                      title: 'Documentation générale',
+                      numero: [nbClasse, 1, 4, 1, 5]
+                    },
+                    {
+                      title: 'Documentation technique',
+                      numero: [nbClasse, 1, 4, 1, 6]
+                    }
+                  ]
+                },
+                {
+                  title: 'Transports',
+                  numero: [nbClasse, 1, 4, 2],
+                  sous_comptes: [
+                    {
+                      title: 'Transports du personnel',
+                      numero: [nbClasse, 1, 4, 2, 1]
+                    },
+                    {
+                      title: 'Transports sur achats',
+                      numero: [nbClasse, 1, 4, 2, 5]
+                    },
+                    {
+                      title: 'Transports sur ventes',
+                      numero: [nbClasse, 1, 4, 2, 6]
+                    },
+                    {
+                      title: 'Autres transports',
+                      numero: [nbClasse, 1, 4, 2, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'Déplacements, missions et réceptions',
+                  numero: [nbClasse, 1, 4, 3],
+                  sous_comptes: [
+                    {
+                      title: 'Voyages et déplacements',
+                      numero: [nbClasse, 1, 4, 3, 1]
+                    },
+                    {
+                      title: 'Frais de déménagement',
+                      numero: [nbClasse, 1, 4, 3, 3]
+                    },
+                    {
+                      title: 'Missions',
+                      numero: [nbClasse, 1, 4, 3, 5]
+                    },
+                    {
+                      title: 'Réceptions',
+                      numero: [nbClasse, 1, 4, 3, 6]
+                    }
+                  ]
+                },
+                {
+                  title: 'Publicité, publications et relations publiques',
+                  numero: [nbClasse, 1, 4, 4],
+                  sous_comptes: [
+                    {
+                      title: 'Annonces et insertions',
+                      numero: [nbClasse, 1, 4, 4, 1]
+                    },
+                    {
+                      title:
+                        'Échantillons, catalogues et imprimés publicitaires',
+                      numero: [nbClasse, 1, 4, 4, 2]
+                    },
+                    {
+                      title: 'Foires et expositions',
+                      numero: [nbClasse, 1, 4, 4, 3]
+                    },
+                    {
+                      title: 'Primes de publicité',
+                      numero: [nbClasse, 1, 4, 4, 4]
+                    },
+                    {
+                      title: 'Publications',
+                      numero: [nbClasse, 1, 4, 4, 6]
+                    },
+                    {
+                      title: 'Cadeaux à la clientèle',
+                      numero: [nbClasse, 1, 4, 4, 7]
+                    },
+                    {
+                      title:
+                        'Autres charges de publicité et relations publiques',
+                      numero: [nbClasse, 1, 4, 4, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'Frais postaux et frais de télécommunications',
+                  numero: [nbClasse, 1, 4, 5],
+                  sous_comptes: [
+                    { title: 'Frais postaux', numero: [nbClasse, 1, 4, 5, 1] },
+                    {
+                      title: 'Frais de téléphone',
+                      numero: [nbClasse, 1, 4, 5, 5]
+                    },
+                    {
+                      title: 'Frais de télex et de télégrammes',
+                      numero: [nbClasse, 1, 4, 5, 6]
+                    }
+                  ]
+                },
+                {
+                  title: 'Cotisations et dons',
+                  numero: [nbClasse, 1, 4, 6],
+                  sous_comptes: [
+                    { title: 'Cotisations', numero: [nbClasse, 1, 4, 6, 1] },
+                    { title: 'Dons', numero: [nbClasse, 1, 4, 6, 2] }
+                  ]
+                },
+                {
+                  title: 'Services bancaires',
+                  numero: [nbClasse, 1, 4, 7],
+                  sous_comptes: [
+                    {
+                      title: "Frais d'achat et de ventes des titres",
+                      numero: [nbClasse, 1, 4, 7, 1]
+                    },
+                    {
+                      title: 'Frais sur effets de commerce',
+                      numero: [nbClasse, 1, 4, 7, 2]
+                    },
+                    {
+                      title: 'Frais et commissions sur services bancaires',
+                      numero: [nbClasse, 1, 4, 7, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Autres charges externes des exercices antérieurs',
+                  numero: [nbClasse, 1, 4, 8]
+                },
+                {
+                  title: 'R.R.R obtenus sur autres charges externes',
+                  numero: [nbClasse, 1, 4, 9]
+                }
+              ]
+            },
+            {
+              title: 'Impôts et taxes',
+              numero: [nbClasse, 1, 6],
+              comptes: [
+                {
+                  title: 'Impôts et taxes directs',
+                  numero: [nbClasse, 1, 6, 1],
+                  sous_comptes: [
+                    {
+                      title: "Taxe urbaine et taxe d'édilité",
+                      numero: [nbClasse, 1, 6, 1, 2]
+                    },
+                    {
+                      title: 'Patente',
+                      numero: [nbClasse, 1, 6, 1, 2]
+                    },
+                    {
+                      title: 'Taxes locales',
+                      numero: [nbClasse, 1, 6, 1, 5]
+                    }
+                  ]
+                },
+                {
+                  title: 'Impôts et taxes indirects',
+                  numero: [nbClasse, 1, 6, 5]
+                },
+                {
+                  title: 'Impôts, taxes et droits assimilés',
+                  numero: [nbClasse, 1, 6, 7],
+                  sous_comptes: [
+                    {
+                      title: "Droits d'enregistrement et de timbre",
+                      numero: [nbClasse, 1, 6, 7, 1]
+                    },
+                    {
+                      title: 'Taxes sur les véhicules',
+                      numero: [nbClasse, 1, 6, 7, 3]
+                    },
+                    {
+                      title: 'Autres impôts, taxes et droits assimilés',
+                      numero: [nbClasse, 1, 6, 7, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'Impôts et taxes des exercices antérieurs',
+                  numero: [nbClasse, 1, 6, 8]
+                }
+              ]
+            },
+            {
+              title: 'Charges de personnel',
+              numero: [nbClasse, 1, 7],
+              comptes: [
+                {
+                  title: 'Rémunération du personnel',
+                  numero: [nbClasse, 1, 7, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Appointements et salaires',
+                      numero: [nbClasse, 1, 7, 1, 1]
+                    },
+                    {
+                      title: 'Primes et gratifications',
+                      numero: [nbClasse, 1, 7, 1, 2]
+                    },
+                    {
+                      title: 'Indemnités et avantages divers',
+                      numero: [nbClasse, 1, 7, 1, 3]
+                    },
+                    {
+                      title: 'Commissions au personnel',
+                      numero: [nbClasse, 1, 7, 1, 4]
+                    },
+                    {
+                      title: 'Rémun. administrateurs, gérants et associés',
+                      numero: [nbClasse, 1, 7, 1, 5]
+                    }
+                  ]
+                },
+                {
+                  title: 'Charges sociales',
+                  numero: [nbClasse, 1, 7, 4],
+                  sous_comptes: [
+                    {
+                      title: 'Cotisations de Sécurité sociale',
+                      numero: [nbClasse, 1, 7, 4, 1]
+                    },
+                    {
+                      title: 'Cotisations aux caisses de retraite',
+                      numero: [nbClasse, 1, 7, 4, 2]
+                    },
+                    {
+                      title: 'Cotisations aux mutuelles',
+                      numero: [nbClasse, 1, 7, 4, 3]
+                    },
+                    {
+                      title: 'Prestations familiales',
+                      numero: [nbClasse, 1, 7, 4, 4]
+                    },
+                    {
+                      title: 'Assurances accidents de travail',
+                      numero: [nbClasse, 1, 7, 4, 5]
+                    }
+                  ]
+                },
+                {
+                  title: 'Autres charges sociales diverses',
+                  numero: [nbClasse, 1, 7, 6],
+                  sous_comptes: [
+                    {
+                      title: 'Assurances groupe',
+                      numero: [nbClasse, 1, 7, 6, 1]
+                    },
+                    {
+                      title: 'Prestations de retraites',
+                      numero: [nbClasse, 1, 7, 6, 2]
+                    },
+                    {
+                      title: 'Allocations aux œuvres sociales',
+                      numero: [nbClasse, 1, 7, 6, 3]
+                    },
+                    {
+                      title: 'Habillement et vêtements de travail',
+                      numero: [nbClasse, 1, 7, 6, 4]
+                    },
+                    {
+                      title: 'Indemnités de préavis et de licenciement',
+                      numero: [nbClasse, 1, 7, 6, 5]
+                    },
+                    {
+                      title: 'Médecine du travail, pharmacie',
+                      numero: [nbClasse, 1, 7, 6, 6]
+                    },
+                    {
+                      title: 'Autres charges sociales diverses',
+                      numero: [nbClasse, 1, 7, 6, 8]
+                    }
+                  ]
+                },
+                {
+                  title: "Rémunération de l'exploitant",
+                  numero: [nbClasse, 1, 7, 7],
+                  sous_comptes: [
+                    {
+                      title: 'Appointements et salaires',
+                      numero: [nbClasse, 1, 7, 7, 1]
+                    },
+                    {
+                      title:
+                        "Charges sociales sur appointements et salaires de l'exploitant",
+                      numero: [nbClasse, 1, 7, 7, 4]
+                    }
+                  ]
+                },
+                {
+                  title: 'Charges de personnel des exercices antérieurs',
+                  numero: [nbClasse, 1, 7, 8]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     7: { title: 'Comptes de produits', numero: [nbClasse], rubriques: [] },
     8: { title: 'Comptes de résultats', numero: [nbClasse], rubriques: [] },
     9: { title: 'Comptes analytiques', numero: [nbClasse], rubriques: [] },
