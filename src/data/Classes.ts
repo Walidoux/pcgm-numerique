@@ -1,4 +1,4 @@
-import { ClassesRange, IClasse } from 'src/types/Classe'
+import type { ClassesRange, IClasse } from 'src/types/Classe'
 
 type ClassesTypes = { [key in ClassesRange]: IClasse }
 
@@ -2681,13 +2681,1240 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
                   numero: [nbClasse, 1, 7, 8]
                 }
               ]
+            },
+            {
+              title: "Dotations d'exploitation",
+              numero: [nbClasse, 1, 9],
+              comptes: [
+                {
+                  title:
+                    "Dotations d'exploitation aux amortissements de l'immobilisation non-valeurs",
+                  numero: [nbClasse, 1, 9, 1],
+                  sous_comptes: [
+                    {
+                      title: 'D.E.A des frais préliminaires',
+                      numero: [nbClasse, 1, 9, 1, 1]
+                    },
+                    {
+                      title: 'D.E.A des charges à répartir',
+                      numero: [nbClasse, 1, 9, 1, 2]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    "Dotations d'exploitation aux amortissements des immobilisations corporelles",
+                  numero: [nbClasse, 1, 9, 2],
+                  sous_comptes: [
+                    {
+                      title:
+                        "D.E.A de l'immobilisation aux amortissements des immobilisations en recherche et développement",
+                      numero: [nbClasse, 1, 9, 2, 1]
+                    },
+                    {
+                      title:
+                        'D.E.A des brevets, marques, droits et valeurs similaires',
+                      numero: [nbClasse, 1, 9, 2, 2]
+                    },
+                    {
+                      title: 'D.E.A du fonds commercial',
+                      numero: [nbClasse, 1, 9, 2, 3]
+                    },
+                    {
+                      title: 'D.E.A des autres immobilisations incorporelles',
+                      numero: [nbClasse, 1, 9, 2, 8]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    "Dotations d'exploitation aux amortissements des immobilisations corporelles",
+                  numero: [nbClasse, 1, 9, 3],
+                  sous_comptes: [
+                    {
+                      title: 'D.E.A des terrains',
+                      numero: [nbClasse, 1, 9, 3, 1]
+                    },
+                    {
+                      title: 'D.E.A des constructions',
+                      numero: [nbClasse, 1, 9, 3, 2]
+                    },
+                    {
+                      title:
+                        'D.E.A des installations techniques, matériel et outillage',
+                      numero: [nbClasse, 1, 9, 3, 3]
+                    },
+                    {
+                      title: 'D.E.A du matériel de transport',
+                      numero: [nbClasse, 1, 9, 3, 4]
+                    },
+                    {
+                      title:
+                        'D.E.A des mobiliers, matériels de bureau et aménagements divers',
+                      numero: [nbClasse, 1, 9, 3, 5]
+                    },
+                    {
+                      title: 'D.E.A des autres immobilisations corporelles',
+                      numero: [nbClasse, 1, 9, 3, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'D.E aux provisions pour dépréc. des immobilisations',
+                  numero: [nbClasse, 1, 9, 4],
+                  sous_comptes: [
+                    {
+                      title:
+                        'D.E.P pour dépréciation des immobilisations incorporelles',
+                      numero: [nbClasse, 1, 9, 4, 1]
+                    },
+                    {
+                      title:
+                        'D.E.P pour dépréciation des immobilisations corporelles',
+                      numero: [nbClasse, 1, 9, 4, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'D.E aux provisions pour risques et charges',
+                  numero: [nbClasse, 1, 9, 5],
+                  sous_comptes: [
+                    {
+                      title: 'D.E.P pour risques et charges durables',
+                      numero: [nbClasse, 1, 9, 5, 5]
+                    },
+                    {
+                      title: 'D.E.P pour risques et charges momentanés',
+                      numero: [nbClasse, 1, 9, 5, 7]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    "Dotations d'exploitation aux provisions pour dépréciation de l'actif circulant",
+                  numero: [nbClasse, 1, 9, 6],
+                  sous_comptes: [
+                    {
+                      title: 'D.E.P pour dépréciation des stocks',
+                      numero: [nbClasse, 1, 9, 6, 1]
+                    },
+                    {
+                      title: "D.E.P pour dépréc. créances de l'actif circulant",
+                      numero: [nbClasse, 1, 9, 6, 4]
+                    }
+                  ]
+                },
+                {
+                  title: "Dotations d'exploitation des exercices antérieurs",
+                  numero: [nbClasse, 1, 9, 8],
+                  sous_comptes: [
+                    {
+                      title: 'D.E aux amortis. exercices antérieurs',
+                      numero: [nbClasse, 1, 9, 8, 1]
+                    },
+                    {
+                      title: 'D.E aux provisions des exercices antérieurs',
+                      numero: [nbClasse, 1, 9, 8, 4]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Charges financières',
+          numero: [nbClasse, 3],
+          postes: [
+            {
+              title: "Charge d'intérêts",
+              numero: [nbClasse, 3, 1],
+              comptes: [
+                {
+                  title: 'Intérêts des emprunts et dettes',
+                  numero: [nbClasse, 3, 1, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Intérêts des emprunts',
+                      numero: [nbClasse, 3, 1, 1, 1]
+                    },
+                    {
+                      title:
+                        'Intérêts des dettes rattachées à des participations',
+                      numero: [nbClasse, 3, 1, 1, 3]
+                    },
+                    {
+                      title:
+                        'Intérêts des comptes courants et dépôts créditeurs',
+                      numero: [nbClasse, 3, 1, 1, 4]
+                    },
+                    {
+                      title:
+                        'Intérêts bancaires et sur opérations de financement',
+                      numero: [nbClasse, 3, 1, 1, 5]
+                    },
+                    {
+                      title: 'Autres intérêts des emprunts et dettes',
+                      numero: [nbClasse, 3, 1, 1, 8]
+                    }
+                  ]
+                },
+                {
+                  title: "Charges d'intérêts des exercices antérieurs",
+                  numero: [nbClasse, 3, 1, 8]
+                }
+              ]
+            },
+            {
+              title: 'Pertes de change',
+              numero: [nbClasse, 3, 3],
+              comptes: [
+                {
+                  title: "Pertes de change propres à l'exercice",
+                  numero: [nbClasse, 3, 3, 1]
+                },
+                {
+                  title: 'Pertes de change des exercices antérieurs',
+                  numero: [nbClasse, 3, 3, 8]
+                }
+              ]
+            },
+            {
+              title: 'Autres charges financières',
+              numero: [nbClasse, 3, 8],
+              comptes: [
+                {
+                  title: 'Pertes sur créances liées à des participations',
+                  numero: [nbClasse, 3, 8, 2]
+                },
+                {
+                  title:
+                    'Charges nettes sur cessions de titres et valeur de placement',
+                  numero: [nbClasse, 3, 8, 5]
+                },
+                {
+                  title: 'Escomptes accordés',
+                  numero: [nbClasse, 3, 8, 6]
+                },
+                {
+                  title: 'Autres charges financières des exercices antérieurs',
+                  numero: [nbClasse, 3, 8, 8]
+                }
+              ]
+            },
+            {
+              title: 'Dotations financières',
+              numero: [nbClasse, 3, 9],
+              comptes: [
+                {
+                  title:
+                    'Dotations aux amortissements des primes de remboursement',
+                  numero: [nbClasse, 3, 9, 1]
+                },
+                {
+                  title:
+                    'Dotations aux provisions pour dépréciation des immobilisations financières',
+                  numero: [nbClasse, 3, 9, 2]
+                },
+                {
+                  title:
+                    'Dotations aux provisions pour risques et charges financiers',
+                  numero: [nbClasse, 3, 9, 3]
+                },
+                {
+                  title:
+                    'Dotations aux provisions pour dépréciation des titres et valeurs de placement',
+                  numero: [nbClasse, 3, 9, 4]
+                },
+                {
+                  title:
+                    'Dotations aux provisions pour dépréciation des comptes de trésorerie',
+                  numero: [nbClasse, 3, 9, 6]
+                },
+                {
+                  title: 'Dotations financières des exercices antérieurs',
+                  numero: [nbClasse, 3, 9, 8]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Charges non courantes',
+          numero: [nbClasse, 5],
+          postes: [
+            {
+              title:
+                "Valeurs nettes d'amortissements des immobilisations cédés",
+              numero: [nbClasse, 5, 1],
+              comptes: [
+                {
+                  title: 'V.N.A des immobilisations incorporelles cédées',
+                  numero: [nbClasse, 5, 1, 2]
+                },
+                {
+                  title: 'V.N.A des immobilisations corporelles cédées',
+                  numero: [nbClasse, 5, 1, 2]
+                },
+                {
+                  title:
+                    'V.N.A des immobilisations financières cédées (droits de propriété)',
+                  numero: [nbClasse, 5, 1, 2]
+                },
+                {
+                  title:
+                    'V.N.A des immobilisations cédées des exercices antérieurs',
+                  numero: [nbClasse, 5, 1, 2]
+                }
+              ]
+            },
+            {
+              title: 'Subventions accordées',
+              numero: [nbClasse, 5, 6],
+              comptes: [
+                {
+                  title: "Subventions accordées de l'exercice",
+                  numero: [nbClasse, 5, 6, 1]
+                },
+                {
+                  title: 'Subventions accordées des exerices antérieurs',
+                  numero: [nbClasse, 5, 6, 8]
+                }
+              ]
+            },
+            {
+              title: 'Autres charges non courantes',
+              numero: [nbClasse, 5, 8],
+              comptes: [
+                {
+                  title: 'Pénalités sur marchés et débits',
+                  numero: [nbClasse, 5, 8, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Pénalités sur marchés',
+                      numero: [nbClasse, 5, 8, 1, 1]
+                    },
+                    {
+                      title: 'Dédits',
+                      numero: [nbClasse, 5, 8, 1, 2]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    "Rappels d'impôts (autres qu'impôts sur les résultats)",
+                  numero: [nbClasse, 5, 8, 2]
+                },
+                {
+                  title: 'Pénalités et amendes fiscales ou pénales',
+                  numero: [nbClasse, 5, 8, 3],
+                  sous_comptes: [
+                    {
+                      title: 'Pénalités et amendes fiscales',
+                      numero: [nbClasse, 5, 8, 3, 1]
+                    },
+                    {
+                      title: 'Pénalités et amendes pénales',
+                      numero: [nbClasse, 5, 8, 3, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Créances devenues irrécouvrables',
+                  numero: [nbClasse, 5, 8, 5]
+                },
+                {
+                  title: 'Dons, libéralités et lots',
+                  numero: [nbClasse, 5, 8, 6],
+                  sous_comptes: [
+                    { title: 'Dons', numero: [nbClasse, 5, 8, 6, 1] },
+                    { title: 'Libéralités', numero: [nbClasse, 5, 8, 6, 2] },
+                    { title: 'Lots', numero: [nbClasse, 5, 8, 6, 3] }
+                  ]
+                },
+                {
+                  title:
+                    'Autres charges non courantes des exercices antérieurs',
+                  numero: [nbClasse, 5, 8, 8]
+                }
+              ]
+            },
+            {
+              title: 'Dotations non courantes',
+              numero: [nbClasse, 5, 9],
+              comptes: [
+                {
+                  title:
+                    'Dotations aux amortissements exceptionnels des immobilisations',
+                  numero: [nbClasse, 5, 9, 1],
+                  sous_comptes: [
+                    {
+                      title: "D.A.E. de l'immobilisation en non-valeurs",
+                      numero: [nbClasse, 5, 9, 1, 1]
+                    },
+                    {
+                      title: "D.A.E. de l'immobilisation incorporelles",
+                      numero: [nbClasse, 5, 9, 1, 2]
+                    },
+                    {
+                      title: "D.A.E. de l'immobilisation corporelles",
+                      numero: [nbClasse, 5, 9, 1, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Dotations non courantes aux provisions réglementées',
+                  numero: [nbClasse, 5, 9, 4],
+                  sous_comptes: [
+                    {
+                      title: 'D.N.C. pour amortissements dérogatoires',
+                      numero: [nbClasse, 5, 9, 4, 1]
+                    },
+                    {
+                      title: "D.N.C. pour plus-values en instance d'imposition",
+                      numero: [nbClasse, 5, 9, 4, 2]
+                    },
+                    {
+                      title: 'D.N.C. pour investissements',
+                      numero: [nbClasse, 5, 9, 4, 4]
+                    },
+                    {
+                      title: 'D.N.C. pour reconstitution de gisements',
+                      numero: [nbClasse, 5, 9, 4, 5]
+                    },
+                    {
+                      title:
+                        'D.N.C. pour acquisition et construction de logements',
+                      numero: [nbClasse, 5, 9, 4, 6]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Dotations non courantes aux provisions pour risques et charges',
+                  numero: [nbClasse, 5, 9, 5],
+                  sous_comptes: [
+                    {
+                      title:
+                        'D.N.C. aux provisions pour risques et charges durables',
+                      numero: [nbClasse, 5, 9, 5, 5]
+                    },
+                    {
+                      title:
+                        'D.N.C. aux provisions pour risques et charges momentanés',
+                      numero: [nbClasse, 5, 9, 5, 7]
+                    }
+                  ]
+                },
+                {
+                  title: 'D.N.C. aux provisions pour dépréciation',
+                  numero: [nbClasse, 5, 9, 6],
+                  sous_comptes: [
+                    {
+                      title:
+                        "D.N.C. aux provisions pour dépréciation de l'actif immobilisé",
+                      numero: [nbClasse, 5, 9, 6, 2]
+                    },
+                    {
+                      title:
+                        "D.N.C. aux provisions pour dépréciation de l'actif circulant",
+                      numero: [nbClasse, 5, 9, 4, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Dotations non courantes des exerices antérieurs',
+                  numero: [nbClasse, 5, 9, 8]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Impôts sur les résultats',
+          numero: [nbClasse, 7],
+          postes: [
+            {
+              title: 'Impôts sur les résultats',
+              numero: [nbClasse, 7, 0],
+              comptes: [
+                {
+                  title: 'Impôts sur les bénéfices',
+                  numero: [nbClasse, 7, 0, 1]
+                },
+                {
+                  title: 'Imposition minimale annuelle des sociétés',
+                  numero: [nbClasse, 7, 0, 5]
+                },
+                {
+                  title: 'Rappels et dégrèvements des impôts sur les résultats',
+                  numero: [nbClasse, 7, 0, 8]
+                }
+              ]
             }
           ]
         }
       ]
     },
-    7: { title: 'Comptes de produits', numero: [nbClasse], rubriques: [] },
-    8: { title: 'Comptes de résultats', numero: [nbClasse], rubriques: [] },
+    7: {
+      title: 'Comptes de produits',
+      numero: [nbClasse],
+      rubriques: [
+        {
+          title: "Produits d'exploitation",
+          numero: [nbClasse, 1],
+          postes: [
+            {
+              title: 'Ventes de marchandises',
+              numero: [nbClasse, 1, 1],
+              comptes: [
+                {
+                  title: 'Ventes de marchandises au Maroc',
+                  numero: [nbClasse, 1, 1, 1]
+                },
+                {
+                  title: "Ventes de marchandises à l'étranger",
+                  numero: [nbClasse, 1, 1, 3]
+                },
+                {
+                  title: 'Ventes de marchandises des exercices antérieurs',
+                  numero: [nbClasse, 1, 1, 8]
+                },
+                {
+                  title:
+                    "Rabais, remises et ristournes accordés par l'entreprise",
+                  numero: [nbClasse, 1, 1, 9]
+                }
+              ]
+            },
+            {
+              title: 'Ventes de biens et services produits',
+              numero: [nbClasse, 1, 2],
+              comptes: [
+                {
+                  title: 'Ventes de biens et produits au Maroc',
+                  numero: [nbClasse, 1, 2, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Ventes de produits finis',
+                      numero: [nbClasse, 1, 2, 1, 1]
+                    },
+                    {
+                      title: 'Ventes de produits intermédiaires',
+                      numero: [nbClasse, 1, 2, 1, 1]
+                    },
+                    {
+                      title: 'Ventes de produits résiduels',
+                      numero: [nbClasse, 1, 2, 1, 1]
+                    }
+                  ]
+                },
+                {
+                  title: "Ventes de biens produits à l'étranger",
+                  numero: [nbClasse, 1, 2, 2],
+                  sous_comptes: [
+                    {
+                      title: 'Ventes de produits finis',
+                      numero: [nbClasse, 1, 2, 2, 1]
+                    },
+                    {
+                      title: 'Ventes de produits intermédiaires',
+                      numero: [nbClasse, 1, 2, 2, 2]
+                    }
+                  ]
+                },
+                {
+                  title: 'Ventes de services produits au Maroc',
+                  numero: [nbClasse, 1, 2, 4],
+                  sous_comptes: [
+                    { title: 'Travaux', numero: [nbClasse, 1, 2, 4, 1] },
+                    { title: 'Études', numero: [nbClasse, 1, 2, 4, 2] },
+                    {
+                      title: 'Prestations de services',
+                      numero: [nbClasse, 1, 2, 4, 3]
+                    }
+                  ]
+                },
+                {
+                  title: "Ventes de services produits à l'étranger",
+                  numero: [nbClasse, 1, 2, 5],
+                  sous_comptes: [
+                    { title: 'Travaux', numero: [nbClasse, 1, 2, 5, 1] },
+                    { title: 'Études', numero: [nbClasse, 1, 2, 5, 2] },
+                    {
+                      title: 'Prestations de services',
+                      numero: [nbClasse, 1, 2, 5, 3]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Redevances pour brevets, marques, droits et valeurs similaires',
+                  numero: [nbClasse, 1, 2, 6]
+                },
+                {
+                  title: 'Ventes de produits accessoires',
+                  numero: [nbClasse, 1, 2, 7],
+                  sous_comptes: [
+                    {
+                      title: 'Locations diverses reçues',
+                      numero: [nbClasse, 1, 2, 7, 1]
+                    },
+                    {
+                      title: 'Commissions et courtages reçus',
+                      numero: [nbClasse, 1, 2, 7, 2]
+                    },
+                    {
+                      title: "Produits de services exploités dans l'intérêt",
+                      numero: [nbClasse, 1, 2, 7, 3]
+                    },
+                    {
+                      title: "Bonis sur reprises d'emballages consignés",
+                      numero: [nbClasse, 1, 2, 7, 5]
+                    },
+                    {
+                      title: 'Ports et frais accessoires facturés',
+                      numero: [nbClasse, 1, 2, 7, 6]
+                    },
+                    {
+                      title: 'Autres ventes et produits accessoires',
+                      numero: [nbClasse, 1, 2, 7, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'Ventes de biens et services produits des exercices',
+                  numero: [nbClasse, 1, 2, 8]
+                },
+                {
+                  title:
+                    "Rabais, remises et ristournes accordés par l'entreprise",
+                  numero: [nbClasse, 1, 2, 9],
+                  sous_comptes: [
+                    {
+                      title:
+                        'R.R.R. accordés sur ventes au Maroc des biens produits',
+                      numero: [nbClasse, 1, 2, 9, 1]
+                    },
+                    {
+                      title:
+                        "R.R.R. accordés sur ventes à l'étranger des biens produits",
+                      numero: [nbClasse, 1, 2, 9, 2]
+                    },
+                    {
+                      title:
+                        'R.R.R. accordés sur ventes au Maroc des services produits',
+                      numero: [nbClasse, 1, 2, 9, 4]
+                    },
+                    {
+                      title:
+                        "R.R.R. accordés sur ventes à l'étranger des services produits",
+                      numero: [nbClasse, 1, 2, 9, 5]
+                    },
+                    {
+                      title:
+                        'R.R.R. accordés sur ventes de biens et services produits des exercices antérieurs',
+                      numero: [nbClasse, 1, 2, 9, 8]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              title: 'Variation des stocks de produits',
+              numero: [nbClasse, 1, 3],
+              comptes: [
+                {
+                  title: 'Variation des stocks de produits en cours',
+                  numero: [nbClasse, 1, 3, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Var. des stocks de bien produits en cours',
+                      numero: [nbClasse, 1, 3, 1, 1]
+                    },
+                    {
+                      title: 'Var. des stocks de produits interméd. en cours',
+                      numero: [nbClasse, 1, 3, 1, 2]
+                    },
+                    {
+                      title: 'Var. des stocks de produits résiduels en cours',
+                      numero: [nbClasse, 1, 3, 1, 7]
+                    }
+                  ]
+                },
+                {
+                  title: 'Variation des stocks de bien produits',
+                  numero: [nbClasse, 1, 3, 2],
+                  sous_comptes: [
+                    {
+                      title: 'Variation des stocks de produits finis',
+                      numero: [nbClasse, 1, 3, 2, 1]
+                    },
+                    {
+                      title: 'Variation des stocks de produits intermédiaires',
+                      numero: [nbClasse, 1, 3, 2, 2]
+                    },
+                    {
+                      title: 'Variation des stocks de produits résiduels',
+                      numero: [nbClasse, 1, 3, 2, 7]
+                    }
+                  ]
+                },
+                {
+                  title: 'Variation des stocks de services en cours',
+                  numero: [nbClasse, 1, 3, 4],
+                  sous_comptes: [
+                    {
+                      title: 'Variation des stocks de services en cours',
+                      numero: [nbClasse, 1, 3, 4, 1]
+                    },
+                    {
+                      title: "Variation des stocks d'études en cours",
+                      numero: [nbClasse, 1, 3, 4, 2]
+                    },
+                    {
+                      title: 'Variatin des stocks de prestations en cours',
+                      numero: [nbClasse, 1, 3, 4, 3]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              title: "Immobilis. prod. par l'entrepr. pour elle-même",
+              numero: [nbClasse, 1, 4],
+              comptes: [
+                {
+                  title: 'Immobilisation en non-valeurs produite',
+                  numero: [nbClasse, 1, 4, 1]
+                },
+                {
+                  title: 'Immobilisations incorporelles produites',
+                  numero: [nbClasse, 1, 4, 2]
+                },
+                {
+                  title: 'Immobilisations corporelles produites',
+                  numero: [nbClasse, 1, 4, 3]
+                },
+                {
+                  title: 'Immobilisations produites des exercices antérieurs',
+                  numero: [nbClasse, 1, 4, 8]
+                }
+              ]
+            },
+            {
+              title: "Subventions d'exploitation",
+              numero: [nbClasse, 1, 6],
+              comptes: [
+                {
+                  title: "Subventions d'exploitation reçues de l'exercice",
+                  numero: [nbClasse, 1, 6, 1]
+                },
+                {
+                  title: "Subventions d'expl reçues des ex. antérieurs",
+                  numero: [nbClasse, 1, 6, 8]
+                }
+              ]
+            },
+            {
+              title: "Autres produits d'exploitation",
+              numero: [nbClasse, 1, 8],
+              comptes: [
+                {
+                  title: 'Jetons de présence reçus',
+                  numero: [nbClasse, 1, 8, 1]
+                },
+                {
+                  title: "Revenus des immeubles non affectés à l'exploitation",
+                  numero: [nbClasse, 1, 8, 2]
+                },
+                {
+                  title: 'Profils sur opérations faites en commun',
+                  numero: [nbClasse, 1, 8, 5]
+                },
+                {
+                  title: 'Transfert de pertes sur opérations faites en commun',
+                  numero: [nbClasse, 1, 8, 6]
+                },
+                {
+                  title:
+                    "Autres produits d'exploitation des exercices antérieurs",
+                  numero: [nbClasse, 1, 8, 8]
+                }
+              ]
+            },
+            {
+              title: "Reprises d'exploitation ; Transferts de charges",
+              numero: [nbClasse, 1, 9],
+              comptes: [
+                {
+                  title:
+                    "Reprises s. amortis. de l'immobilisation en non-valeurs",
+                  numero: [nbClasse, 1, 9, 1]
+                },
+                {
+                  title: 'Reprises sur amortiss. des immobil. incorporelles',
+                  numero: [nbClasse, 1, 9, 2]
+                },
+                {
+                  title: 'Reprises sur amortiss. des immobil. corporelles',
+                  numero: [nbClasse, 1, 9, 3]
+                },
+                {
+                  title: 'Reprises sur prov. pour dépréc. des immobilisations',
+                  numero: [nbClasse, 1, 9, 4]
+                },
+                {
+                  title: 'Reprises sur provisions pour risques et charge',
+                  numero: [nbClasse, 1, 9, 5]
+                },
+                {
+                  title:
+                    "Reprises sur prov. pour dépréc. de l'actif circualant",
+                  numero: [nbClasse, 1, 9, 6]
+                },
+                {
+                  title: "Transferts de charges d'exploitation",
+                  numero: [nbClasse, 1, 9, 7],
+                  sous_comptes: [
+                    {
+                      title: 'T.C.E. - achats de marchandises',
+                      numero: [nbClasse, 1, 9, 7, 1]
+                    },
+                    {
+                      title: 'T.C.E. - achats consom. matières et fournitures',
+                      numero: [nbClasse, 1, 9, 7, 2]
+                    },
+                    {
+                      title: 'T.C.E. - autres charges externes',
+                      numero: [nbClasse, 1, 9, 7, 3]
+                    },
+                    {
+                      title: 'T.C.E. - impôts et taxes',
+                      numero: [nbClasse, 1, 9, 7, 5]
+                    },
+                    {
+                      title: 'T.C.E. - charges de personnel',
+                      numero: [nbClasse, 1, 9, 7, 6]
+                    },
+                    {
+                      title: "T.C.E. - autres charges d'exploitation",
+                      numero: [nbClasse, 1, 9, 7, 8]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Reprises sur amort. et prov. des exercices antérieurs',
+                  numero: [nbClasse, 1, 9, 8],
+                  sous_comptes: [
+                    {
+                      title: 'Reprises sur amort. des exercices antérieurs',
+                      numero: [nbClasse, 1, 9, 8, 1]
+                    },
+                    {
+                      title: 'Reprises sur provisions des exercices antérieurs',
+                      numero: [nbClasse, 1, 9, 8, 4]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Produits financiers',
+          numero: [nbClasse, 3],
+          postes: [
+            {
+              title:
+                'Produits des titres de participation et des autres titres immobilisés',
+              numero: [nbClasse, 3, 2],
+              comptes: [
+                {
+                  title: 'Revenus des titres de participation',
+                  numero: [nbClasse, 3, 2, 1]
+                },
+                {
+                  title: 'Revenus des titres immobilisés',
+                  numero: [nbClasse, 3, 2, 5]
+                },
+                {
+                  title:
+                    'Produits des titres de participation et des autres titres immobilisés des exerices antérieurs',
+                  numero: [nbClasse, 3, 2, 8]
+                }
+              ]
+            },
+            {
+              title: 'Gains de change',
+              numero: [nbClasse, 3, 3],
+              comptes: [
+                {
+                  title: "Gains de change propres à l'exercice",
+                  numero: [nbClasse, 3, 3, 1]
+                },
+                {
+                  title: 'Gains de change des exericces antérieurs',
+                  numero: [nbClasse, 3, 3, 8]
+                }
+              ]
+            },
+            {
+              title: 'Intérêts et autres produits financiers',
+              numero: [nbClasse, 3, 8],
+              comptes: [
+                {
+                  title: 'Intérêts de produits assimilés',
+                  numero: [nbClasse, 3, 8, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Intérêts des prêts',
+                      numero: [nbClasse, 3, 8, 1, 1]
+                    },
+                    {
+                      title: 'Revenus des autres créances financières',
+                      numero: [nbClasse, 3, 8, 1, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Revenus des créances rattachées à des participations',
+                  numero: [nbClasse, 3, 8, 3]
+                },
+                {
+                  title: 'Revenus des titre et valeurs de placement',
+                  numero: [nbClasse, 3, 8, 4]
+                },
+                {
+                  title:
+                    'Produits nets sur cessions de titres et val. de placement',
+                  numero: [nbClasse, 3, 8, 5]
+                },
+                {
+                  title: 'Escomptes obtenus',
+                  numero: [nbClasse, 3, 8, 6]
+                },
+                {
+                  title:
+                    'Intérêts et autres prod. finan. des exercices antérieurs',
+                  numero: [nbClasse, 3, 8, 8]
+                }
+              ]
+            },
+            {
+              title: 'Reprises financières ; Transferts de charges',
+              numero: [nbClasse, 3, 9],
+              comptes: [
+                {
+                  title:
+                    'Reprises sur amortissements des primes de remboursement des obligations',
+                  numero: [nbClasse, 3, 9, 1]
+                },
+                {
+                  title:
+                    'Reprises sur provisions pour dépréciation des immobilisations financières',
+                  numero: [nbClasse, 3, 9, 2]
+                },
+                {
+                  title:
+                    'Reprises sur prov. pour risques et charges financières',
+                  numero: [nbClasse, 3, 9, 3]
+                },
+                {
+                  title:
+                    'Reprises sur prov. p. dépr. titres et val. de placement',
+                  numero: [nbClasse, 3, 9, 4]
+                },
+                {
+                  title:
+                    'Reprises sur prov. p. depr. des comptes de trésorerie',
+                  numero: [nbClasse, 3, 9, 6]
+                },
+                {
+                  title: 'Transferts de charges financières',
+                  numero: [nbClasse, 3, 9, 7],
+                  sous_comptes: [
+                    {
+                      title: "Transferts - charge d'intérêts",
+                      numero: [nbClasse, 3, 9, 7, 1]
+                    },
+                    {
+                      title: 'Transferts - pertes de change',
+                      numero: [nbClasse, 3, 9, 7, 3]
+                    },
+                    {
+                      title: 'Transferts - autres charges financières',
+                      numero: [nbClasse, 3, 9, 7, 8]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Reprises sur dotations financ. des exercices antérieurs',
+                  numero: [nbClasse, 3, 9, 8]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Produits non courants',
+          numero: [nbClasse, 5],
+          postes: [
+            {
+              title: "Produits des cessions d'immobilisations",
+              numero: [nbClasse, 5, 1],
+              comptes: [
+                {
+                  title: 'P.C. des immobilisations incorporelles',
+                  numero: [nbClasse, 5, 1, 2]
+                },
+                {
+                  title: 'P.C. des immobilisations corporelles',
+                  numero: [nbClasse, 5, 1, 3]
+                },
+                {
+                  title:
+                    'P.C. des immobilisations financières (droits de propriété)',
+                  numero: [nbClasse, 5, 1, 4]
+                },
+                {
+                  title: 'P.C. des immobilisations des exercices antérieurs',
+                  numero: [nbClasse, 5, 1, 8]
+                }
+              ]
+            },
+            {
+              title: "Subventions d'équilibre",
+              numero: [nbClasse, 5, 6],
+              comptes: [
+                {
+                  title: "Subventions d'équilibre reçues de l'exercice",
+                  numero: [nbClasse, 5, 6, 1]
+                },
+                {
+                  title:
+                    "Subventions d'équilibre reçues des exercices antérieurs",
+                  numero: [nbClasse, 5, 6, 8]
+                }
+              ]
+            },
+            {
+              title: "Reprises sur subventions d'investissement",
+              numero: [nbClasse, 5, 7],
+              comptes: [
+                {
+                  title: "Reprises sur subv. d'investis. de l'exercice",
+                  numero: [nbClasse, 5, 7, 7]
+                },
+                {
+                  title: "Reprises sur subv. d'investis. des exercices antér.",
+                  numero: [nbClasse, 5, 7, 8]
+                }
+              ]
+            },
+            {
+              title: 'Autres produits non courantes',
+              numero: [nbClasse, 5, 8],
+              comptes: [
+                {
+                  title: 'Pénalités et débits reçus',
+                  numero: [nbClasse, 5, 8, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Pénalités reçues sur marchés',
+                      numero: [nbClasse, 5, 8, 1, 1]
+                    },
+                    {
+                      title: 'Débits reçus',
+                      numero: [nbClasse, 5, 8, 1, 2]
+                    }
+                  ]
+                },
+                {
+                  title: "Dégrèvements d'impôts (autres qu'impôts sur résult.)",
+                  numero: [nbClasse, 5, 8, 2]
+                },
+                {
+                  title: 'Rentrées sur créances soldées',
+                  numero: [nbClasse, 5, 8, 5]
+                },
+                {
+                  title: 'Dons, libéralités et lors reçus',
+                  numero: [nbClasse, 5, 8, 6],
+                  sous_comptes: [
+                    {
+                      title: 'Dons - 75862: Libéralités - 75863: Lots',
+                      numero: [nbClasse, 5, 8, 6, 1]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Autres produits non courants des exercices antérieurs',
+                  numero: [nbClasse, 5, 8, 8]
+                }
+              ]
+            },
+            {
+              title: 'Reprises non courantes ; Transferts de charges',
+              numero: [nbClasse, 5, 9],
+              comptes: [
+                {
+                  title: 'R.N.C. sur amort. except. des immobilisations',
+                  numero: [nbClasse, 5, 9, 1],
+                  sous_comptes: [
+                    {
+                      title: "R.A.E. de l'immobilisation en non-valeurs",
+                      numero: [nbClasse, 5, 9, 1, 1]
+                    },
+                    {
+                      title: "R.A.E. de l'immobilisation en incorporelles",
+                      numero: [nbClasse, 5, 9, 1, 2]
+                    },
+                    {
+                      title: "R.A.E. de l'immobilisation en corporelles",
+                      numero: [nbClasse, 5, 9, 1, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Reprises non courantes sur provisions réglementées',
+                  numero: [nbClasse, 5, 9, 4],
+                  sous_comptes: [
+                    {
+                      title: 'Reprises sur amortissements dérogatoires',
+                      numero: [nbClasse, 5, 9, 4, 1]
+                    },
+                    {
+                      title: "Reprises sur plus-values en inst. d'imposition",
+                      numero: [nbClasse, 5, 9, 4, 2]
+                    },
+                    {
+                      title: 'Reprises sur provisions pour investissements',
+                      numero: [nbClasse, 5, 9, 4, 4]
+                    },
+                    {
+                      title: 'Reprises sur prov. p. reconstit. de gisements',
+                      numero: [nbClasse, 5, 9, 4, 5]
+                    },
+                    {
+                      title: 'Rep. sur prov. pour acq. et const. logements',
+                      numero: [nbClasse, 5, 9, 4, 6]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Reprises non courantes s. prov. pour risques et charges',
+                  numero: [nbClasse, 5, 9, 5],
+                  sous_comptes: [
+                    {
+                      title: 'Repr. s. prov. p. risques et charges durables',
+                      numero: [nbClasse, 5, 9, 5, 5]
+                    },
+                    {
+                      title: 'Repr. s. prov. p. risques et charges momentanés',
+                      numero: [nbClasse, 5, 9, 5, 7]
+                    }
+                  ]
+                },
+                {
+                  title: 'R.N.C. sur provisions pour dépréciation',
+                  numero: [nbClasse, 5, 9, 6],
+                  sous_comptes: [
+                    {
+                      title:
+                        "R.N.C. sur prov. p. dépréc. de l'actif immobilisé",
+                      numero: [nbClasse, 5, 9, 6, 2]
+                    },
+                    {
+                      title: "R.N.C. sur prov. p. dépréc. de l'actif circulant",
+                      numero: [nbClasse, 5, 9, 6, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Transferts de charges non courantes',
+                  numero: [nbClasse, 5, 9, 7]
+                },
+                {
+                  title: 'Reprises non courantes des exercices antérieurs',
+                  numero: [nbClasse, 5, 9, 8]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    8: {
+      title: 'Comptes de résultats',
+      numero: [nbClasse],
+      rubriques: [
+        {
+          title: "Résultat d'exploitation",
+          numero: [nbClasse, 1],
+          postes: [
+            {
+              title: "Résultat d'exploitation",
+              numero: [nbClasse, 1, 0],
+              description: '(8100 idem)'
+            },
+            {
+              title: 'Marge brute',
+              numero: [nbClasse, 1, 1],
+              description: '(8110 idem)'
+            },
+            {
+              title: 'Valeur ajoutée',
+              numero: [nbClasse, 1, 4],
+              description: '(8140 idem)'
+            },
+            {
+              title: "Excédent brut d'exploitation",
+              numero: [nbClasse, 1, 7],
+              comptes: [
+                {
+                  title: "Excédent brut d'exploitation (créditeur)",
+                  numero: [nbClasse, 1, 7, 1]
+                },
+                {
+                  title: "Insuffisance brute d'exploitation (débiteur)",
+                  numero: [nbClasse, 1, 7, 9]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Résultat financier',
+          numero: [nbClasse, 3],
+          description: '(830 et 8300 idem)'
+        },
+        {
+          title: 'Résultat courant',
+          numero: [nbClasse, 4],
+          description: '(840 et 8400 idem)'
+        },
+        {
+          title: 'Résultat non courant',
+          numero: [nbClasse, 5],
+          description: '(850 et 8500 idem)'
+        },
+        {
+          title: 'Résultat avant impôts',
+          numero: [nbClasse, 6],
+          description: '(860 et 8500 idem)'
+        },
+        {
+          title: 'Résultat après impôts',
+          numero: [nbClasse, 8],
+          description: '(880 et 8800 idem)'
+        }
+      ]
+    },
     9: { title: 'Comptes analytiques', numero: [nbClasse], rubriques: [] },
     0: { title: 'Comptes spéciaux', numero: [nbClasse], rubriques: [] }
   }

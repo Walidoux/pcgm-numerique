@@ -21,13 +21,14 @@ export type ClasseNumsRefs<T extends number> =
 export interface DefaultData_NumRefTo<K extends number> {
   title: string
   numero: ClasseNumsRefs<K>
+  description?: string
 }
 
 export type ClassesRange = Range<0, 10>
 
 export type IClasse = DefaultData_NumRefTo<1> & { rubriques: IRubrique[] }
-export type IRubrique = DefaultData_NumRefTo<2> & { postes: IPoste[] }
-export type IPoste = DefaultData_NumRefTo<3> & { comptes: ICompte[] }
+export type IRubrique = DefaultData_NumRefTo<2> & { postes?: IPoste[] }
+export type IPoste = DefaultData_NumRefTo<3> & { comptes?: ICompte[] }
 export type ICompte = DefaultData_NumRefTo<4> & {
   sous_comptes?: Array<DefaultData_NumRefTo<5>>
 }
