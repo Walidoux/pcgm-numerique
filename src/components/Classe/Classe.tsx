@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { ClasseNumsRefs, IClasse } from 'src/types/Classe'
+import type { ClasseNumsRefs, IClasse } from 'src/types/Classe'
 import { Fragment } from 'react'
 
 import { Title } from './Title'
@@ -37,19 +37,21 @@ export const Classe: React.FC<ClasseProps> = ({ className, classe }) => {
             title={rubrique.title}
             numero={rubrique.numero}
             whichTitle='rubrique'
+            description={rubrique.description}
             handleNumRefs={() => handleNumRefs(rubrique.numero)}
           />
 
-          {rubrique.postes.map((post, i) => (
+          {rubrique.postes?.map((post, i) => (
             <Fragment key={i}>
               <Element
                 title={post.title}
                 numero={post.numero}
                 whichElement='poste'
+                description={post.description}
                 handleNumRefs={() => handleNumRefs(post.numero)}
               />
 
-              {post.comptes.map((compte, i) => (
+              {post.comptes?.map((compte, i) => (
                 <Fragment key={i}>
                   <Element
                     title={compte.title}

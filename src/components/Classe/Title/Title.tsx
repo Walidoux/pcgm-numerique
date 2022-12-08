@@ -37,6 +37,7 @@ interface TitleProps extends DefaultData_NumRefTo<1 | 2 | 3> {
 export const Title: React.FC<TitleProps> = ({
   title,
   numero,
+  description,
   whichTitle,
   handleNumRefs,
   classe,
@@ -45,7 +46,7 @@ export const Title: React.FC<TitleProps> = ({
   <div
     className={classNames(
       className,
-      'flex items-center justify-center uppercase text-white',
+      'flex items-center justify-center text-white',
       pickPaletteColors(classe.numero[0] as number),
       {
         'h-[75px] rounded-xl shadow-xl': whichTitle === 'classe',
@@ -61,15 +62,18 @@ export const Title: React.FC<TitleProps> = ({
         }
       )}>
       {handleNumRefs != null
-        ? handleNumRefs(numero as ClasseNumsRefs<2 | 3>)
-        : numero.join()}
+        ? handleNumRefs(numero as ClasseNumsRefs<2 | 3>).join('')
+        : numero.join('')}
     </span>
-    <span
-      className={classNames('flex h-full w-full items-center px-8 font-inter', {
-        'text-2xl font-bold': whichTitle === 'classe',
-        'font-semibold': whichTitle === 'rubrique'
-      })}>
-      {title}
-    </span>
+    <div className='flex h-full w-full items-center px-8 font-inter'>
+      <span
+        className={classNames('uppercase', {
+          'text-2xl font-bold': whichTitle === 'classe',
+          'font-semibold': whichTitle === 'rubrique'
+        })}>
+        {title}
+      </span>
+      {description != null && <span className='ml-4'>{description}</span>}
+    </div>
   </div>
 )
