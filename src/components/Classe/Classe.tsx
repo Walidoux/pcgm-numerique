@@ -27,6 +27,7 @@ export const Classe: React.FC<ClasseProps> = ({ className, classe }) => {
         title={classe.title}
         numero={classe.numero}
         whichTitle='classe'
+        description={classe.description}
         className={classNames({ 'mt-8': classe.numero[0] !== 1 })}
       />
 

@@ -3915,7 +3915,535 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
         }
       ]
     },
-    9: { title: 'Comptes analytiques', numero: [nbClasse], rubriques: [] },
+    9: {
+      title: 'Comptes analytiques',
+      numero: [nbClasse],
+      description: 'Purement indicatif (selon le PCG)',
+      rubriques: [
+        {
+          title: 'Comptes de produits et charges réfléchis',
+          numero: [nbClasse, 0],
+          postes: [
+            {
+              title:
+                'Stocks de provisions pour dépréciation de stocks réfléchis',
+              numero: [nbClasse, 0, 3],
+              comptes: [
+                { title: 'Stocks réfléchis', numero: [nbClasse, 0, 3, 1] },
+                {
+                  title: 'Provisions pour dépréciation des stocks réfléchis',
+                  numero: [nbClasse, 0, 3, 9]
+                }
+              ]
+            },
+            {
+              title: 'Charges réfléchis',
+              numero: [nbClasse, 0, 6],
+              comptes: [
+                {
+                  title: "Charges d'exploitation réfléchies",
+                  numero: [nbClasse, 0, 6, 1]
+                },
+                {
+                  title: 'Charges financières réfléchies',
+                  numero: [nbClasse, 0, 6, 3]
+                },
+                {
+                  title: 'Charges non courantes réfléchies',
+                  numero: [nbClasse, 0, 6, 5]
+                },
+                {
+                  title: 'Impôts sur les résultats réfléchis',
+                  numero: [nbClasse, 0, 6, 7]
+                }
+              ]
+            },
+            {
+              title: 'Produits réfléchis',
+              numero: [nbClasse, 0, 7],
+              comptes: [
+                {
+                  title: "Produits d'exploitation réfléchis",
+                  numero: [nbClasse, 0, 7, 1]
+                },
+                {
+                  title: 'Produits financières réfléchis',
+                  numero: [nbClasse, 0, 7, 3]
+                },
+                {
+                  title: 'Produits non courantes réfléchis',
+                  numero: [nbClasse, 0, 7, 5]
+                }
+              ]
+            },
+            {
+              title: 'Résultat réfléchis',
+              numero: [nbClasse, 0, 8],
+              comptes: [
+                {
+                  title: "Résultat d'exploitation réfléchi",
+                  numero: [nbClasse, 0, 8, 1]
+                },
+                {
+                  title: 'Résultat financier réfléchi',
+                  numero: [nbClasse, 0, 8, 3]
+                },
+                {
+                  title: 'Résultat courant réfléchi',
+                  numero: [nbClasse, 0, 8, 4]
+                },
+                {
+                  title: 'Résultat non courant réfléchi',
+                  numero: [nbClasse, 0, 8, 5]
+                },
+                {
+                  title: 'Résultat avantd impôts réfléchi',
+                  numero: [nbClasse, 0, 8, 6]
+                },
+                {
+                  title: 'Résultat après impôts réfléchi',
+                  numero: [nbClasse, 0, 8, 8]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: "Comptes de réclassement et d'analyse",
+          numero: [nbClasse, 1],
+          description:
+            "Les comptes de cette rubrique sont ouverts et attribués selon les nécessités de l'entreprise"
+        },
+        {
+          title: 'Sections analytiques',
+          numero: [nbClasse, 2],
+          postes: [
+            {
+              title: 'Sections analytiques',
+              numero: [nbClasse, 2, 1],
+              comptes: [
+                { title: 'Section A', numero: [nbClasse, 2, 1, 1] },
+                { title: 'Section B', numero: [nbClasse, 2, 1, 2] }
+              ]
+            },
+            {
+              title: "Sections d'approvisionnement",
+              numero: [nbClasse, 2, 3],
+              comptes: [
+                { title: 'Section A', numero: [nbClasse, 2, 3, 1] },
+                { title: 'Section B', numero: [nbClasse, 2, 3, 2] }
+              ]
+            },
+            {
+              title: 'Sections de production',
+              numero: [nbClasse, 2, 5],
+              comptes: [
+                { title: 'Section A', numero: [nbClasse, 2, 5, 1] },
+                { title: 'Section B', numero: [nbClasse, 2, 5, 2] }
+              ]
+            },
+            {
+              title: 'Sections de distribution',
+              numero: [nbClasse, 2, 7],
+              comptes: [
+                { title: 'Section A', numero: [nbClasse, 2, 7, 1] },
+                { title: 'Section B', numero: [nbClasse, 2, 7, 2] }
+              ]
+            },
+            {
+              title: 'Autres sections analytiques',
+              numero: [nbClasse, 2, 8],
+              comptes: [
+                { title: 'Section A', numero: [nbClasse, 2, 8, 1] },
+                { title: 'Section B', numero: [nbClasse, 2, 8, 2] }
+              ]
+            }
+          ]
+        },
+        {
+          title: "Coûts d'achats ou de production",
+          numero: [nbClasse, 3],
+          postes: [
+            {
+              title: "Coûts d'achat",
+              numero: [nbClasse, 3, 3],
+              comptes: [
+                {
+                  title: "Coûts d'achat de marchandises",
+                  numero: [nbClasse, 3, 3, 1]
+                },
+                {
+                  title: "Coûts d'achat de matières et de fournitures",
+                  numero: [nbClasse, 3, 3, 5]
+                }
+              ]
+            },
+            {
+              title: 'Coûts de production',
+              numero: [nbClasse, 3, 5],
+              comptes: [
+                {
+                  title: 'Coûts de production des produits (groupe A)',
+                  numero: [nbClasse, 3, 5, 1]
+                },
+                {
+                  title: 'Coûts de production des produits (groupe B)',
+                  numero: [nbClasse, 3, 5, 2]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Inventaire permanent des stocks',
+          numero: [nbClasse, 4],
+          postes: [
+            {
+              title: 'Inventaire permanent des marchandises',
+              numero: [nbClasse, 4, 1],
+              comptes: [
+                {
+                  title: 'Marchandises (groupe A)',
+                  numero: [nbClasse, 4, 1, 1]
+                },
+                {
+                  title: 'Marchandises (groupe B)',
+                  numero: [nbClasse, 4, 1, 2]
+                },
+                {
+                  title: 'Marchandises en cours de route',
+                  numero: [nbClasse, 4, 1, 6]
+                },
+                {
+                  title: 'Autres marchandises',
+                  numero: [nbClasse, 4, 1, 8]
+                }
+              ]
+            },
+            {
+              title: 'Inv. per. des matières et fournitures consommables',
+              numero: [nbClasse, 4, 2],
+              comptes: [
+                { title: 'Matières premières', numero: [nbClasse, 4, 2, 1] },
+                {
+                  title: 'Matières et fournitures consommables',
+                  numero: [nbClasse, 4, 2, 2]
+                },
+                {
+                  title: 'Emballages',
+                  numero: [nbClasse, 4, 2, 3]
+                },
+                {
+                  title: 'Matières et fourn. consommables en cours de route',
+                  numero: [nbClasse, 4, 2, 6]
+                },
+                {
+                  title: 'Autres matières et fournitures consommables',
+                  numero: [nbClasse, 4, 2, 8]
+                }
+              ]
+            },
+            {
+              title: 'Inv. perm. des produits en cours',
+              numero: [nbClasse, 4, 3],
+              comptes: [
+                { title: 'Biens en cours', numero: [nbClasse, 4, 3, 1] },
+                { title: 'Services en cours', numero: [nbClasse, 4, 3, 4] },
+                {
+                  title: 'Autres produits en cours',
+                  numero: [nbClasse, 4, 3, 8]
+                }
+              ]
+            },
+            {
+              title: 'Inv. perm. des prod. intermédiaires et prod. résiduels',
+              numero: [nbClasse, 4, 4],
+              comptes: [
+                { title: 'Biens intermédiaires', numero: [nbClasse, 4, 4, 1] },
+                { title: 'Produits résiduels', numero: [nbClasse, 4, 4, 5] },
+                {
+                  title: 'Autres produits intermédiaires et produits résiduels',
+                  numero: [nbClasse, 4, 4, 8]
+                }
+              ]
+            },
+            {
+              title: 'Inventaire permanent des produits finis',
+              numero: [nbClasse, 4, 1],
+              comptes: [
+                {
+                  title: 'Produits finis (groupe A)',
+                  numero: [nbClasse, 4, 1, 1]
+                },
+                {
+                  title: 'Produits finis (groupe B)',
+                  numero: [nbClasse, 4, 1, 2]
+                },
+                {
+                  title: 'Produits finis en cours de route',
+                  numero: [nbClasse, 4, 1, 6]
+                },
+                {
+                  title: 'Autres produits finis',
+                  numero: [nbClasse, 4, 1, 8]
+                }
+              ]
+            },
+            {
+              title: 'Provisions pour dépréciation des stocks',
+              numero: [nbClasse, 4, 9],
+              comptes: [
+                {
+                  title: 'Provisions pour dépréciation des marchandises',
+                  numero: [nbClasse, 4, 9, 1]
+                },
+                {
+                  title:
+                    'Prov. pour dépréc. des matières et fournitures consommables',
+                  numero: [nbClasse, 4, 9, 2]
+                },
+                {
+                  title: 'Provisions pour dépréciation des produits en cours',
+                  numero: [nbClasse, 4, 9, 3]
+                },
+                {
+                  title:
+                    'Prov. p. dépréc. des prod. intermédiaires et prod. résiduels',
+                  numero: [nbClasse, 4, 9, 4]
+                },
+                {
+                  title: 'Provisions pour dépréciation des produits finis',
+                  numero: [nbClasse, 4, 9, 5]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Coûts de revient',
+          numero: [nbClasse, 5],
+          postes: [
+            {
+              title: 'Coûts de revient des marchandises',
+              numero: [nbClasse, 5, 3],
+              comptes: [
+                {
+                  title: 'Coûts de revient des marchandises (groupe A)',
+                  numero: [nbClasse, 5, 3, 1]
+                },
+                {
+                  title: 'Coûts de revient des marchandises (groupe Bt)',
+                  numero: [nbClasse, 5, 3, 2]
+                }
+              ]
+            },
+            {
+              title: 'Coûts de revient des produits',
+              numero: [nbClasse, 5, 5],
+              comptes: [
+                {
+                  title: 'Coûts de revient des produits (groupe A)',
+                  numero: [nbClasse, 5, 5, 1]
+                },
+                {
+                  title: 'Coûts de revient des produits (groupe B)',
+                  numero: [nbClasse, 5, 5, 2]
+                }
+              ]
+            },
+            {
+              title: 'Autres coûts de revient',
+              numero: [nbClasse, 5, 8],
+              comptes: [
+                {
+                  title: 'Coûts de revient (groupe A)',
+                  numero: [nbClasse, 5, 8, 1]
+                },
+                {
+                  title: 'Coûts de revient (groupe B)',
+                  numero: [nbClasse, 5, 8, 2]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Écarts sur coûts préétablis',
+          numero: [nbClasse, 6],
+          postes: [
+            {
+              title: 'Écarts sur sections',
+              numero: [nbClasse, 6, 2],
+              comptes: [
+                { title: 'Écarts sur quantités', numero: [nbClasse, 6, 2, 1] },
+                { title: 'Écarts sur coûts', numero: [nbClasse, 6, 2, 2] }
+              ]
+            },
+            {
+              title: 'Écarts sur inventaire permanent des stocks',
+              numero: [nbClasse, 6, 4],
+              comptes: [
+                { title: 'Écarts sur quantités', numero: [nbClasse, 6, 4, 1] },
+                { title: 'Écarts sur coûts', numero: [nbClasse, 6, 4, 2] }
+              ]
+            }
+          ]
+        },
+        {
+          title: "Différences d'incorporation",
+          numero: [nbClasse, 7],
+          postes: [
+            {
+              title: 'Charges non incorporables',
+              numero: [nbClasse, 7, 1],
+              description: '(9710 : idem)'
+            },
+            {
+              title: 'Charges supplétives incorporées',
+              numero: [nbClasse, 7, 2],
+              description: '(9720 : idem)'
+            },
+            {
+              title: 'Produits non incorporés',
+              numero: [nbClasse, 7, 3],
+              description: '(9730 : idem)'
+            },
+            {
+              title: 'Différences sur charges incorporables',
+              numero: [nbClasse, 7, 4],
+              description: '(9740 : idem)'
+            },
+            {
+              title: 'Différences sur produits incorporables',
+              numero: [nbClasse, 7, 5],
+              description: '(9750 : idem)'
+            },
+            {
+              title: "Différences d'inventaire",
+              numero: [nbClasse, 7, 6],
+              comptes: [
+                {
+                  title: "Différences d'inventaire sur marchandises",
+                  numero: [nbClasse, 7, 6, 1]
+                },
+                {
+                  title: "Différences d'inv. s. matières et fournit. consomm.",
+                  numero: [nbClasse, 7, 6, 2]
+                },
+                {
+                  title: "Différences d'inventaire sur produits en cours",
+                  numero: [nbClasse, 7, 6, 3]
+                },
+                {
+                  title:
+                    "Diff. d'inv. s. prod. intermédiaires et prod. résiduels",
+                  numero: [nbClasse, 7, 6, 4]
+                },
+                {
+                  title: "Différences d'inventaire sur produits finis",
+                  numero: [nbClasse, 7, 6, 5]
+                }
+              ]
+            },
+            {
+              title: "Différences sur niveau d'activité",
+              numero: [nbClasse, 7, 7],
+              description: '(9770 : idem)'
+            },
+            {
+              title: "Autres différences d'incorporation",
+              numero: [nbClasse, 7, 8],
+              description: '(9780 : idem)'
+            }
+          ]
+        },
+        {
+          title: 'Résultats analytiques',
+          numero: [nbClasse, 8],
+          postes: [
+            {
+              title: 'Résultats analytiques sur marchandises',
+              numero: [nbClasse, 8, 1],
+              comptes: [
+                {
+                  title: 'Résultats analytiques sur marchandises (groupe A)',
+                  numero: [nbClasse, 8, 1, 1]
+                },
+                {
+                  title: 'Résultats analytiques sur marchandises (groupe B)',
+                  numero: [nbClasse, 8, 1, 2]
+                }
+              ]
+            },
+            {
+              title: 'Résultats analytiques sur biens produits',
+              numero: [nbClasse, 8, 2],
+              comptes: [
+                {
+                  title: 'Résultats analytiques sur biens produits (groupe A)',
+                  numero: [nbClasse, 8, 2, 1]
+                },
+                {
+                  title: 'Résultats analytiques sur biens produits (groupe B)',
+                  numero: [nbClasse, 8, 2, 2]
+                }
+              ]
+            },
+            {
+              title: 'Résultats analytiques sur services produits',
+              numero: [nbClasse, 8, 3],
+              comptes: [
+                {
+                  title:
+                    'Résultats analytiques sur services produits (groupe A)',
+                  numero: [nbClasse, 8, 3, 1]
+                },
+                {
+                  title:
+                    'Résultats analytiques sur services produits (groupe B)',
+                  numero: [nbClasse, 8, 3, 2]
+                }
+              ]
+            },
+            {
+              title: 'Report des écarts sur coûts préétablis',
+              numero: [nbClasse, 8, 6],
+              description: '(9860 : idem)'
+            },
+            {
+              title: "Reports des différences d'incorporation",
+              numero: [nbClasse, 8, 7],
+              description: '(9870 : idem)'
+            }
+          ]
+        },
+        {
+          title: 'Comptes de liaisons internes',
+          numero: [nbClasse, 9],
+          postes: [
+            {
+              title: 'Liaisons internes propres à un même établissement',
+              numero: [nbClasse, 9, 1],
+              description: '(9910 : idem)'
+            },
+            {
+              title: "Cessions à d'autres établiseements",
+              numero: [nbClasse, 9, 5],
+              comptes: [
+                {
+                  title: "Cessions fournies à d'autres établissements",
+                  numero: [nbClasse, 9, 5, 1]
+                },
+                {
+                  title: "Cessions reçues d'autres établissements",
+                  numero: [nbClasse, 9, 5, 5]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     0: { title: 'Comptes spéciaux', numero: [nbClasse], rubriques: [] }
   }
 
