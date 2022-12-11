@@ -1,5 +1,9 @@
 import classNames from 'classnames'
-import { ClasseNumsRefs, DefaultData_NumRefTo, IClasse } from 'src/types/Classe'
+import type {
+  ClasseNumsRefs,
+  DefaultData_NumRefTo,
+  IClasse
+} from 'src/types/Classe'
 
 import { FuncNumRefType } from '..'
 
@@ -50,7 +54,7 @@ export const Title: React.FC<TitleProps> = ({
       pickPaletteColors(classe.numero[0] as number),
       {
         'h-[75px] rounded-xl shadow-xl': whichTitle === 'classe',
-        'mt-6 min-h-[35px] rounded-lg shadow-lg': whichTitle === 'rubrique'
+        'mt-4 min-h-[35px] rounded-lg shadow-lg': whichTitle === 'rubrique'
       }
     )}>
     <span
@@ -61,9 +65,10 @@ export const Title: React.FC<TitleProps> = ({
           'text-xl': whichTitle === 'rubrique'
         }
       )}>
-      {handleNumRefs != null
-        ? handleNumRefs(numero as ClasseNumsRefs<2 | 3>).join('')
-        : numero.join('')}
+      {(handleNumRefs != null
+        ? handleNumRefs(numero as ClasseNumsRefs<2 | 3>)
+        : numero
+      ).join('')}
     </span>
     <div className='flex h-full w-full items-center px-8 font-inter'>
       <span

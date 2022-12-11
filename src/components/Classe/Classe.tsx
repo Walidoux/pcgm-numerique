@@ -5,30 +5,25 @@ import { Fragment } from 'react'
 import { Title } from './Title'
 import { Element } from '../Element'
 
-interface ClasseProps {
-  className?: string
-  classe: IClasse
-}
-
 export type FuncNumRefType = (
   el: ClasseNumsRefs<2 | 3>
 ) => ClasseNumsRefs<2 | 3> | number[]
 
-export const Classe: React.FC<ClasseProps> = ({ className, classe }) => {
+export const Classe: React.FC<{ classe: IClasse }> = ({ classe }) => {
   const handleNumRefs: FuncNumRefType = (el) =>
     Array.isArray(el[0]) && !el.includes('/' as never)
       ? el.splice(1, 0, '/' as never)
       : el
 
   return (
-    <section className={classNames(className, '')}>
+    <section>
       <Title
         classe={classe}
         title={classe.title}
         numero={classe.numero}
         whichTitle='classe'
         description={classe.description}
-        className={classNames({ 'mt-8': classe.numero[0] !== 1 })}
+        className={classNames({ 'mt-5': classe.numero[0] !== 1 })}
       />
 
       {classe.rubriques.map((rubrique, i) => (

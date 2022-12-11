@@ -19,8 +19,8 @@ export const Element: React.FC<ElementProps> = ({
   className
 }) => (
   <div
-    className={classNames(className, 'flex items-center px-4', {
-      'mt-4 mb-1': whichElement === 'poste',
+    className={classNames(className, 'flex items-center px-8', {
+      'mt-2 mb-1': whichElement === 'poste',
       'cursor-pointer rounded-lg transition hover:bg-gray-200':
         whichElement !== 'poste',
       'ml-10 text-blue-500': whichElement === 'sous_compte'
@@ -35,13 +35,15 @@ export const Element: React.FC<ElementProps> = ({
     </span>
 
     {whichElement === 'poste' && (
-      <AiOutlineLine className='ml-4 mt-1 self-start' />
+      <AiOutlineLine className='ml-2 mt-1 self-start' />
     )}
-    <div className='mx-4'>
+    <div className='ml-3'>
       <span className={classNames({ 'font-bold': whichElement === 'poste' })}>
         {title}
       </span>
-      {description != null && <span className='ml-4'>{description}</span>}
+      {description != null && (
+        <span className='ml-1 text-sm'>{description}</span>
+      )}
     </div>
   </div>
 )
