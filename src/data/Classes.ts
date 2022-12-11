@@ -4232,7 +4232,7 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
                   numero: [nbClasse, 5, 3, 1]
                 },
                 {
-                  title: 'Coûts de revient des marchandises (groupe Bt)',
+                  title: 'Coûts de revient des marchandises (groupe B)',
                   numero: [nbClasse, 5, 3, 2]
                 }
               ]
