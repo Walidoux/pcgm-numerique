@@ -4444,7 +4444,1203 @@ export const getClasse = (nbClasse: ClassesRange): IClasse => {
         }
       ]
     },
-    0: { title: 'Comptes spéciaux', numero: [nbClasse], rubriques: [] }
+    0: {
+      title: 'Comptes spéciaux',
+      numero: [nbClasse],
+      rubriques: [
+        {
+          title: "Bilan d'ouverture",
+          numero: [nbClasse, 1],
+          postes: [
+            {
+              title: 'Réouverture des comptes de financement permanent',
+              numero: [nbClasse, 1, 1],
+              comptes: [
+                {
+                  title: 'Réouverture des comptes des capitaux propres',
+                  numero: [nbClasse, 1, 1, 1],
+                  sous_comptes: [
+                    {
+                      title: 'R.C. du capital social ou permanent',
+                      numero: [nbClasse, 1, 1, 1, 1]
+                    },
+                    {
+                      title: "R.C. des primes d'émission, de fusion, d'apport",
+                      numero: [nbClasse, 1, 1, 1, 2]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes des écarts de réévaluation',
+                      numero: [nbClasse, 1, 1, 1, 3]
+                    },
+                    {
+                      title: 'Réouverture des comptes de réserve légale',
+                      numero: [nbClasse, 1, 1, 1, 4]
+                    },
+                    {
+                      title: 'Réouverture des comptes des autres réserves',
+                      numero: [nbClasse, 1, 1, 1, 5]
+                    },
+                    {
+                      title: 'Réouverture des comptes du report à nouveau',
+                      numero: [nbClasse, 1, 1, 1, 6]
+                    },
+                    {
+                      title: "R.C. des résultats nets en instance d'affection",
+                      numero: [nbClasse, 1, 1, 1, 8]
+                    },
+                    {
+                      title:
+                        "Réouverture des comptes du résultat net de l'exercice",
+                      numero: [nbClasse, 1, 1, 1, 9]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Réouverture des comptes des capitaux propres assimilés',
+                  numero: [nbClasse, 1, 1, 3],
+                  sous_comptes: [
+                    {
+                      title: "R.C. de subventions d'investissement",
+                      numero: [nbClasse, 1, 1, 3, 1]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes de provisions réglementées',
+                      numero: [nbClasse, 1, 1, 3, 5]
+                    }
+                  ]
+                },
+                {
+                  title: 'Réouverture des comptes dettes de financement',
+                  numero: [nbClasse, 1, 1, 4],
+                  sous_comptes: [
+                    {
+                      title: "Réouverture des comptes d'emprunts obligataires",
+                      numero: [nbClasse, 1, 1, 4, 1]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes des autres dettes de financement',
+                      numero: [nbClasse, 1, 1, 4, 8]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Réouverture des comptes de provisions durables pour risques et charges',
+                  numero: [nbClasse, 1, 1, 5],
+                  sous_comptes: [
+                    {
+                      title:
+                        'Réouverture des comptes de provisions pour risques',
+                      numero: [nbClasse, 1, 1, 5, 1]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes de provisions pour charges',
+                      numero: [nbClasse, 1, 1, 5, 5]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Réouverture des comptes de liaison des établissements et succursales',
+                  numero: [nbClasse, 1, 1, 6]
+                },
+                {
+                  title: "Réouverture de comptes d'écarts de conversion passif",
+                  numero: [nbClasse, 1, 1, 7],
+                  sous_comptes: [
+                    {
+                      title: "R.C. d'écarts de conversion passif",
+                      numero: [nbClasse, 1, 1, 7, 1]
+                    },
+                    {
+                      title:
+                        "Réouverture des comptes d'écarts sur dettes de financement",
+                      numero: [nbClasse, 1, 1, 7, 2]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              title: "Réouverture des comptes d'actif immobilisé",
+              numero: [nbClasse, 1, 2],
+              comptes: [
+                {
+                  title:
+                    "Réouverture des comptes d'immobilisation en non-valeurs",
+                  numero: [nbClasse, 1, 2, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Réouverture des comptes de frais préliminaires',
+                      numero: [nbClasse, 1, 2, 1, 1]
+                    },
+                    {
+                      title:
+                        'R.C. de charges à répartir sur plusieurs exercices',
+                      numero: [nbClasse, 1, 2, 1, 2]
+                    },
+                    {
+                      title: 'R.C. de primes de remboursement des obligations',
+                      numero: [nbClasse, 1, 2, 1, 3]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    "Réouverture des comptes d'immobilisation incorporelles",
+                  numero: [nbClasse, 1, 2, 2],
+                  sous_comptes: [
+                    {
+                      title:
+                        "R.C. de l'immobilisation en recherche et développement",
+                      numero: [nbClasse, 1, 2, 2, 1]
+                    },
+                    {
+                      title:
+                        'R.C. de brevets, marques, droits et valeurs similaires',
+                      numero: [nbClasse, 1, 2, 2, 2]
+                    },
+                    {
+                      title: 'Réouverture des comptes de fonds commercial',
+                      numero: [nbClasse, 1, 2, 2, 3]
+                    },
+                    {
+                      title: "R.C. d'autres immobilisations incorporelles",
+                      numero: [nbClasse, 1, 2, 2, 8]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Réouverture des comptes des immobilisations corporelles',
+                  numero: [nbClasse, 1, 2, 3],
+                  sous_comptes: [
+                    {
+                      title: 'Réouverture des comptes de terrains',
+                      numero: [nbClasse, 1, 2, 3, 1]
+                    },
+                    {
+                      title: 'Réouverture des comptes de constructions',
+                      numero: [nbClasse, 1, 2, 3, 2]
+                    },
+                    {
+                      title:
+                        'R.C. des installations techniques, matériel et outillage',
+                      numero: [nbClasse, 1, 2, 3, 3]
+                    },
+                    {
+                      title: 'Réouverture des comptes de matériel et transport',
+                      numero: [nbClasse, 1, 2, 3, 4]
+                    },
+                    {
+                      title:
+                        'R.C. de mobilier, matériel de bureau et aménagements',
+                      numero: [nbClasse, 1, 2, 3, 5]
+                    },
+                    {
+                      title: 'R.C. des autres immobilisations corporelles',
+                      numero: [nbClasse, 1, 2, 3, 8]
+                    },
+                    {
+                      title: 'R.C. des immobilisations corporelles en cours',
+                      numero: [nbClasse, 1, 2, 3, 9]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Réouverture des comptes des immobilisations financières',
+                  numero: [
+                    [nbClasse, 1, 2, 4],
+                    [nbClasse, 1, 2, 5]
+                  ],
+                  sous_comptes: [
+                    {
+                      title: 'Réouverture des comptes de prêts immobilisés',
+                      numero: [nbClasse, 1, 2, 4, 1]
+                    },
+                    {
+                      title: 'R.C. des autres créances financières',
+                      numero: [nbClasse, 1, 2, 4, 8]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes de titres de participation',
+                      numero: [nbClasse, 1, 2, 5, 1]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes des autres titres immobilisés',
+                      numero: [nbClasse, 1, 2, 5, 8]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Réouverture des comptes des écarts de conversion - actif',
+                  numero: [nbClasse, 1, 2, 7],
+                  sous_comptes: [
+                    {
+                      title:
+                        'Réouverture des comptes des écarts sur créances immobilisés',
+                      numero: [nbClasse, 1, 2, 7, 1]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes des écarts sur dettes de financement',
+                      numero: [nbClasse, 1, 2, 7, 2]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    "Réouverture des comptes de provisions pour dépréciation des comptes de l'actif immobilisé",
+                  numero: [nbClasse, 1, 2, 9]
+                }
+              ]
+            },
+            {
+              title:
+                "Réouverture des comptes d'actif circulant (hors trésorerie)",
+              numero: [nbClasse, 1, 3],
+              comptes: [
+                {
+                  title: 'Réouverture des comptes de stock',
+                  numero: [nbClasse, 1, 3, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Réouverture des comptes de marchandises',
+                      numero: [nbClasse, 1, 3, 1, 1]
+                    },
+                    {
+                      title: 'R.C. de matières et fournitures consommables',
+                      numero: [nbClasse, 1, 3, 1, 2]
+                    },
+                    {
+                      title: 'Réouverture des comptes de produits en cours',
+                      numero: [nbClasse, 1, 3, 1, 3]
+                    },
+                    {
+                      title:
+                        'R.C. de produits intermédiaires et produits résiduels',
+                      numero: [nbClasse, 1, 3, 1, 4]
+                    },
+                    {
+                      title: 'Réouverture des comptes de produits finis',
+                      numero: [nbClasse, 1, 3, 1, 5]
+                    }
+                  ]
+                },
+                {
+                  title: 'Réouverture des comptes de créances',
+                  numero: [nbClasse, 1, 3, 4],
+                  sous_comptes: [
+                    {
+                      title:
+                        'Réouverture des comptes de fournisseurs débiteurs avances et acomptes',
+                      numero: [nbClasse, 1, 3, 4, 1]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes de clients et comptes rattachés',
+                      numero: [nbClasse, 1, 3, 4, 2]
+                    },
+                    {
+                      title: 'Réouverture des comptes de personnel débiteur',
+                      numero: [nbClasse, 1, 3, 4, 3]
+                    },
+                    {
+                      title: "Réouverture des comptes d'État-débiteur",
+                      numero: [nbClasse, 1, 3, 4, 5]
+                    },
+                    {
+                      title: "Réouverture des comptes d'associés débiteurs",
+                      numero: [nbClasse, 1, 3, 4, 6]
+                    },
+                    {
+                      title: 'Réouverture des comptes des autres débiteurs',
+                      numero: [nbClasse, 1, 3, 4, 8]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes de régularisation - Actif',
+                      numero: [nbClasse, 1, 3, 4, 9]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Réouverture des comptes, titres et valeurs de placement',
+                  numero: [nbClasse, 1, 3, 5]
+                },
+                {
+                  title:
+                    'Réouverture des comptes des écarts de conversation - Actif (Éléments circulants)',
+                  numero: [nbClasse, 1, 3, 7]
+                },
+                {
+                  title:
+                    "Réouverture des comptes de provisions pour dépréciation des comptes de l'actif circulant",
+                  numero: [nbClasse, 1, 3, 9]
+                }
+              ]
+            },
+            {
+              title:
+                'Réouverture des comptes du passif circulant (hors trésorerie)',
+              numero: [nbClasse, 1, 4],
+              comptes: [
+                {
+                  title:
+                    'Réouverture des comptes de dettes du passif circulant',
+                  numero: [nbClasse, 1, 4, 4],
+                  sous_comptes: [
+                    {
+                      title: 'R.C. de fournisseurs et comptes rattachés',
+                      numero: [nbClasse, 1, 4, 4, 1]
+                    },
+                    {
+                      title: 'R.C. de clients créditeurs, avances et acomptes',
+                      numero: [nbClasse, 1, 4, 4, 2]
+                    },
+                    {
+                      title: 'Réouverture des comptes du personnel - créditeur',
+                      numero: [nbClasse, 1, 4, 4, 3]
+                    },
+                    {
+                      title: 'R.C. des organismes sociaux créditeurs',
+                      numero: [nbClasse, 1, 4, 4, 4]
+                    },
+                    {
+                      title: 'Réouverture des comptes État - créditeur',
+                      numero: [nbClasse, 1, 4, 4, 5]
+                    },
+                    {
+                      title: "Réouverture des comptes d'associés créditeurs",
+                      numero: [nbClasse, 1, 4, 4, 6]
+                    },
+                    {
+                      title: 'Réouverture des comptes des autres créanciers',
+                      numero: [nbClasse, 1, 4, 4, 8]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes de régularisation - Passif',
+                      numero: [nbClasse, 1, 4, 4, 9]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Réouverture des comptes des autres provisions pour risques et charges',
+                  numero: [nbClasse, 1, 4, 5]
+                },
+                {
+                  title:
+                    'Réouverture des comptes des écarts de conversion - Passif (Éléments circulants)',
+                  numero: [nbClasse, 1, 4, 7]
+                }
+              ]
+            },
+            {
+              title: 'Réouverture des comptes de trésorerie',
+              numero: [nbClasse, 1, 5],
+              comptes: [
+                {
+                  title: 'Réouverture des comptes de trésorerie - Actif',
+                  numero: [nbClasse, 1, 5, 1],
+                  sous_comptes: [
+                    {
+                      title:
+                        'Réouverture des comptes de chèques et valeurs à encaisser',
+                      numero: [nbClasse, 1, 5, 1, 1]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes de banques, TG et CP (soldes débiteurs)',
+                      numero: [nbClasse, 1, 5, 1, 4]
+                    },
+                    {
+                      title:
+                        "Réouverture des comptes de caisses, régies d'avances et accréditifs",
+                      numero: [nbClasse, 1, 5, 1, 6]
+                    }
+                  ]
+                },
+                {
+                  title: 'Réouverture des comptes de trésorerie - Passif',
+                  numero: [nbClasse, 1, 5, 5],
+                  sous_comptes: [
+                    {
+                      title: "Réouverture des crédits d'escompte",
+                      numero: [nbClasse, 1, 5, 5, 2]
+                    },
+                    {
+                      title: 'Réouverture des comptes de crédits de trésorerie',
+                      numero: [nbClasse, 1, 5, 5, 3]
+                    },
+                    {
+                      title:
+                        'Réouverture des comptes de banques (soldes créditeurs)',
+                      numero: [nbClasse, 1, 5, 5, 2]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Réouverture des comptes de provisions pour dépréciation des comptes de trésorerie',
+                  numero: [nbClasse, 1, 5, 9]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Clôture du bilan',
+          numero: [nbClasse, 2],
+          postes: [
+            {
+              title: 'Clôture des comptes de financement permanent',
+              numero: [nbClasse, 2, 1],
+              comptes: [
+                {
+                  title: 'Clôture des comptes de capitaux propres',
+                  numero: [nbClasse, 2, 1, 1],
+                  sous_comptes: [
+                    {
+                      title:
+                        'Clôture des comptes du capital social ou personnel',
+                      numero: [nbClasse, 2, 1, 1, 1]
+                    },
+                    {
+                      title:
+                        "Clôture des comptes de primes d'émission, de fusion et d'apport",
+                      numero: [nbClasse, 2, 1, 1, 2]
+                    },
+                    {
+                      title: 'Clôture des comptes des écarts de réévaluation',
+                      numero: [nbClasse, 2, 1, 1, 3]
+                    },
+                    {
+                      title: 'Clôture des comptes de réserve légale',
+                      numero: [nbClasse, 2, 1, 1, 4]
+                    },
+                    {
+                      title: 'Clôture des comptes des autres réserves',
+                      numero: [nbClasse, 2, 1, 1, 5]
+                    },
+                    {
+                      title: 'Clôture des comptes de report à nouveau',
+                      numero: [nbClasse, 2, 1, 1, 6]
+                    },
+                    {
+                      title:
+                        "Clôture des comptes de résulats nets en instance d'affectation",
+                      numero: [nbClasse, 2, 1, 1, 8]
+                    },
+                    {
+                      title:
+                        "Clôture des comptes du résultat net de l'exercice",
+                      numero: [nbClasse, 2, 1, 1, 9]
+                    }
+                  ]
+                },
+                {
+                  title: 'Clôture des comptes de capitaux propres assimilés',
+                  numero: [nbClasse, 2, 1, 3],
+                  sous_comptes: [
+                    {
+                      title:
+                        "Clôture des comptes de subventions d'investissement",
+                      numero: [nbClasse, 2, 1, 3, 1]
+                    },
+                    {
+                      title: 'Clôture des comptes de provisions réglementées',
+                      numero: [nbClasse, 2, 1, 3, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'Clôture des comptes de dettes de financement',
+                  numero: [nbClasse, 2, 1, 4],
+                  sous_comptes: [
+                    {
+                      title: 'Clôture des comptes des emprunts obligataires',
+                      numero: [nbClasse, 2, 1, 4, 1]
+                    },
+                    {
+                      title:
+                        'Clôture des comptes des autres dettes de financement',
+                      numero: [nbClasse, 2, 1, 4, 8]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Clôture des comptes de provisions pour risques et charges',
+                  numero: [nbClasse, 2, 1, 5],
+                  sous_comptes: [
+                    {
+                      title: 'Clôture des comptes de provisions pour risques',
+                      numero: [nbClasse, 2, 1, 5, 1]
+                    },
+                    {
+                      title: 'Clôture des comptes de provisions pour charges',
+                      numero: [nbClasse, 2, 1, 5, 5]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Clôture des comptes de liaisons des établissements et succursales',
+                  numero: [nbClasse, 2, 1, 6]
+                },
+                {
+                  title:
+                    'Clôture des comptes des écarts de conversion - Passif',
+                  numero: [nbClasse, 2, 1, 7],
+                  sous_comptes: [
+                    {
+                      title:
+                        'Clôture des comptes des écarts sur créances immobilisées',
+                      numero: [nbClasse, 2, 1, 7, 1]
+                    },
+                    {
+                      title:
+                        'Clôture des comptes des écarts sur dettes de financement',
+                      numero: [nbClasse, 2, 1, 7, 2]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              title: "Clôture des comptes d'actif immobilisé",
+              numero: [nbClasse, 2, 2],
+              comptes: [
+                {
+                  title: "Clôture des comptes d'immobilisation en non-valeurs",
+                  numero: [nbClasse, 2, 2, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Clôture des comptes de frais préliminaires',
+                      numero: [nbClasse, 2, 2, 1, 1]
+                    },
+                    {
+                      title:
+                        'Clôture des comptes de charges à répartir sur plusieurs exercices',
+                      numero: [nbClasse, 2, 2, 1, 2]
+                    },
+                    {
+                      title:
+                        'Clôture des comptes de primes de remboursement des obligations',
+                      numero: [nbClasse, 2, 2, 1, 3]
+                    }
+                  ]
+                },
+                {
+                  title: 'Clôture des comptes de immobilisations incorporelles',
+                  numero: [nbClasse, 2, 2, 2],
+                  sous_comptes: [
+                    {
+                      title:
+                        "C.C. d'immobilisation en recherche et développement",
+                      numero: [nbClasse, 2, 2, 2, 1]
+                    },
+                    {
+                      title:
+                        'C.C. de brevets, marques, droits, et val. similaires',
+                      numero: [nbClasse, 2, 2, 2, 2]
+                    },
+                    {
+                      title: 'Clôure des comptes de fond commercial',
+                      numero: [nbClasse, 2, 2, 2, 3]
+                    },
+                    {
+                      title: 'C.C. des autres immobilisations incorporelles',
+                      numero: [nbClasse, 2, 2, 2, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'Clôture des comptes des immobilisations corporelles',
+                  numero: [nbClasse, 2, 2, 3],
+                  sous_comptes: [
+                    {
+                      title: 'Clôture des comptes de terrains',
+                      numero: [nbClasse, 2, 2, 3, 1]
+                    },
+                    {
+                      title: 'Clôture des comptes de constructions',
+                      numero: [nbClasse, 2, 2, 3, 2]
+                    },
+                    {
+                      title: 'C.C. des installations techn. mater. et outil.',
+                      numero: [nbClasse, 2, 2, 3, 3]
+                    },
+                    {
+                      title: 'Clôture des comptes de matériel de transport',
+                      numero: [nbClasse, 2, 2, 3, 4]
+                    },
+                    {
+                      title:
+                        'C.C. de mobilier, matériel de bureau et aménagement',
+                      numero: [nbClasse, 2, 2, 3, 5]
+                    },
+                    {
+                      title:
+                        'Clôture des comptes ded autres immobilisations corporelles',
+                      numero: [nbClasse, 2, 2, 3, 8]
+                    },
+                    {
+                      title:
+                        'Clôture des comptes des immobilisations corporelles en cours',
+                      numero: [nbClasse, 2, 2, 3, 9]
+                    }
+                  ]
+                },
+                {
+                  title: 'Clôture des comptes des immoblisations financières',
+                  numero: [
+                    [nbClasse, 2, 2, 4],
+                    [nbClasse, 2, 2, 5]
+                  ],
+                  sous_comptes: [
+                    {
+                      title: 'Clôture des comptes de prêts immobilisés',
+                      numero: [nbClasse, 2, 2, 4, 1]
+                    },
+                    {
+                      title:
+                        'Clôture des comptes des autres créances financières',
+                      numero: [nbClasse, 2, 2, 4, 8]
+                    },
+                    {
+                      title: 'Clôture des comptes de titres de participation',
+                      numero: [nbClasse, 2, 2, 5, 1]
+                    },
+                    {
+                      title:
+                        'Clôture des comptes des autres titres immobilisés',
+                      numero: [nbClasse, 2, 2, 5, 8]
+                    }
+                  ]
+                },
+                {
+                  title: 'Clôture des comptes et écarts de conversion - Actif',
+                  numero: [nbClasse, 2, 2, 7],
+                  sous_comptes: [
+                    {
+                      title: 'C.C. des écarts sur créances immobilisées',
+                      numero: [nbClasse, 2, 2, 7, 1]
+                    },
+                    {
+                      title: 'Clôture des comptes sur dettes de financement',
+                      numero: [nbClasse, 2, 2, 7, 2]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Clôture des comptes des amortissements des immobilisations',
+                  numero: [nbClasse, 2, 2, 8]
+                },
+                {
+                  title:
+                    "Clôture des comptes de provisions pour dépréciation des comptes de l'actif immobilisé",
+                  numero: [nbClasse, 2, 2, 9]
+                }
+              ]
+            },
+            {
+              title: "Clôture des comptes d'actif circulant",
+              numero: [nbClasse, 2, 3],
+              comptes: [
+                {
+                  title: 'Clôture des comptes de stocks',
+                  numero: [nbClasse, 2, 3, 1],
+                  sous_comptes: [
+                    {
+                      title: 'Clôture des comptes de marchandises',
+                      numero: [nbClasse, 2, 3, 1, 1]
+                    },
+                    {
+                      title: 'C.C. de matières et fournitures consommables',
+                      numero: [nbClasse, 2, 3, 1, 2]
+                    },
+                    {
+                      title: 'Clôture des comptes de produits en cours',
+                      numero: [nbClasse, 2, 3, 1, 3]
+                    },
+                    {
+                      title:
+                        'C.C. de produits intermédiaires et prod. résiduels',
+                      numero: [nbClasse, 2, 3, 1, 4]
+                    },
+                    {
+                      title: 'Clôture des comptes de produits finis',
+                      numero: [nbClasse, 2, 3, 1, 5]
+                    }
+                  ]
+                },
+                {
+                  title: 'Clôture des comptes de créances',
+                  numero: [nbClasse, 2, 3, 4],
+                  sous_comptes: [
+                    {
+                      title:
+                        'C.C. de fournisseurs débiteurs, avances et acomptes',
+                      numero: [nbClasse, 2, 3, 4, 1]
+                    },
+                    {
+                      title: 'Clôture des comptes de créances',
+                      numero: [nbClasse, 2, 3, 4, 2]
+                    },
+                    {
+                      title: 'Clôture des comptes de personnel - débiteur',
+                      numero: [nbClasse, 2, 3, 4, 3]
+                    },
+                    {
+                      title: "Clôture des comptes d'État - débiteur",
+                      numero: [nbClasse, 2, 3, 4, 5]
+                    },
+                    {
+                      title: "Clôture des comptes d'associés débiteurs",
+                      numero: [nbClasse, 2, 3, 4, 6]
+                    },
+                    {
+                      title: 'Clôture des comptes des autres débiteurs',
+                      numero: [nbClasse, 2, 3, 4, 8]
+                    },
+                    {
+                      title: 'Clôture des comptes de régularisation - Actif',
+                      numero: [nbClasse, 2, 3, 4, 9]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Clôture des comptes de titres et valeurs de placement',
+                  numero: [nbClasse, 2, 3, 5]
+                },
+                {
+                  title:
+                    'Clôture des comptes des écarts de conversion (Éléments circulants)',
+                  numero: [nbClasse, 2, 3, 7]
+                },
+                {
+                  title:
+                    "Clôture des comptes de provisions pour dépréciation des comptes de l'actif circulant",
+                  numero: [nbClasse, 2, 3, 9]
+                }
+              ]
+            },
+            {
+              title:
+                'Clôture des comptes de passif circulant (hors trésorerie)',
+              numero: [nbClasse, 2, 4],
+              comptes: [
+                {
+                  title: 'Clôture des comptes de dettes du passif circulant',
+                  numero: [nbClasse, 2, 4, 4],
+                  sous_comptes: [
+                    {
+                      title: 'C.C. de fournisseurs et comptes rattachés',
+                      numero: [nbClasse, 2, 4, 4, 1]
+                    },
+                    {
+                      title: 'C.C. de clients créditeurs, avances et acomptes',
+                      numero: [nbClasse, 2, 4, 4, 2]
+                    },
+                    {
+                      title: 'Clôture des comptes de personnel - créditeur',
+                      numero: [nbClasse, 2, 4, 4, 3]
+                    },
+                    {
+                      title: 'C.C. des organismes sociaux - créditeurs',
+                      numero: [nbClasse, 2, 4, 4, 4]
+                    },
+                    {
+                      title: 'Clôture des comptes État - créditeur',
+                      numero: [nbClasse, 2, 4, 4, 5]
+                    },
+                    {
+                      title:
+                        'Clôture des comptes des autres associés créditeurs',
+                      numero: [nbClasse, 2, 4, 4, 6]
+                    },
+                    {
+                      title: 'Clôture des comptes des autres créanciers',
+                      numero: [nbClasse, 2, 4, 4, 8]
+                    },
+                    {
+                      title: 'Clôture des comptes de régularisation - Passif',
+                      numero: [nbClasse, 2, 4, 4, 9]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Clôture des comptes des autres provisions pour risques et charges',
+                  numero: [nbClasse, 2, 4, 5]
+                },
+                {
+                  title:
+                    'Clôure des comptes des écarts de conversion - Passif (Éléments circulants)',
+                  numero: [nbClasse, 2, 4, 7]
+                }
+              ]
+            },
+            {
+              title: 'Clôture des comptes de trésorerie',
+              numero: [nbClasse, 2, 5],
+              comptes: [
+                {
+                  title: 'Clôture des comptes de trésorerie - Actif',
+                  numero: [nbClasse, 2, 5, 1],
+                  sous_comptes: [
+                    {
+                      title:
+                        'Clôture des comptes de chèques et valeurs à encaisser',
+                      numero: [nbClasse, 2, 5, 1, 1]
+                    },
+                    {
+                      title: 'C.C. de Banques, TG et CP (soldes débiteurs)',
+                      numero: [nbClasse, 2, 5, 1, 4]
+                    },
+                    {
+                      title: "C.C. de caisses, Régies d'avances et accréditifs",
+                      numero: [nbClasse, 2, 5, 1, 6]
+                    }
+                  ]
+                },
+                {
+                  title: 'Clôture des comptes de trésorerie - Passif',
+                  numero: [nbClasse, 2, 5, 5],
+                  sous_comptes: [
+                    {
+                      title: "Clôture des comptes des crédits d'escompte",
+                      numero: [nbClasse, 2, 5, 5, 2]
+                    },
+                    {
+                      title: 'Clôture des comptes des crédits de trésorerie',
+                      numero: [nbClasse, 2, 5, 5, 3]
+                    }
+                  ]
+                },
+                {
+                  title:
+                    'Clôture des comptes de provisions pour dépréciation des comptes de trésorerie',
+                  numero: [nbClasse, 2, 5, 9]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: "Comptes d'ordre",
+          numero: [nbClasse, 3],
+          postes: [
+            {
+              title: 'Opérations en instance de dénouement',
+              numero: [nbClasse, 3, 1],
+              description: '(débit)',
+              comptes: [
+                {
+                  title: 'Opérations en instance de dénouement',
+                  numero: [nbClasse, 3, 1, 1]
+                },
+                {
+                  title:
+                    'Contrepartie des opérations en instance de dénouement',
+                  numero: [nbClasse, 3, 1, 9]
+                }
+              ]
+            },
+            {
+              title: 'Opérations en instance de dénouement',
+              numero: [nbClasse, 3, 3],
+              description: '(crédit)',
+              comptes: [
+                {
+                  title: 'Opérations de crédit en instance de dénouement',
+                  numero: [nbClasse, 3, 3, 1]
+                },
+                {
+                  title:
+                    'Contrepartie des opérations en instance de dénouement',
+                  numero: [nbClasse, 3, 3, 9]
+                }
+              ]
+            },
+            {
+              title: 'Opération en devises entrées',
+              numero: [nbClasse, 3, 5],
+              comptes: [
+                {
+                  title: 'Contre - valeur devises - entrées',
+                  numero: [nbClasse, 3, 5, 1]
+                },
+                {
+                  title: 'Contrepartie devises - entrées',
+                  numero: [nbClasse, 3, 5, 9]
+                }
+              ]
+            },
+            {
+              title: 'Opérations en devises sorties',
+              numero: [nbClasse, 3, 6],
+              comptes: [
+                {
+                  title: 'Contre - valeur devises - sorties',
+                  numero: [nbClasse, 3, 6, 1]
+                },
+                {
+                  title: 'Contrepartie devises - sorties',
+                  numero: [nbClasse, 3, 6, 9]
+                }
+              ]
+            },
+            {
+              title: 'Autres données statistiques',
+              numero: [nbClasse, 3, 8],
+              comptes: [
+                {
+                  title: 'Opérations statistiques suivies',
+                  numero: [nbClasse, 3, 8, 1]
+                },
+                {
+                  title: 'Contrepartie des opéraitons statistiques variés',
+                  numero: [nbClasse, 3, 8, 9]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Engagements donnés',
+          numero: [nbClasse, 4],
+          postes: [
+            {
+              title: 'Avals, cautions et garanties donnés',
+              numero: [nbClasse, 4, 1],
+              comptes: [
+                {
+                  title: 'Avals, cautions et garanties donnés',
+                  numero: [nbClasse, 4, 1, 1]
+                },
+                {
+                  title: 'Débiteurs pour avals et cautions donnés',
+                  numero: [nbClasse, 4, 1, 9]
+                }
+              ]
+            },
+            {
+              title:
+                'Engagements en matière de pensions de retraite et obligations similaires',
+              numero: [nbClasse, 4, 3],
+              comptes: [
+                {
+                  title:
+                    'Engagements en matière de pensions de retraite et obligations similaires',
+                  numero: [nbClasse, 4, 3, 1]
+                },
+                {
+                  title:
+                    'Débiteurs pour engagements en matière de pensions de retraite et obligations similaires',
+                  numero: [nbClasse, 4, 3, 9]
+                }
+              ]
+            },
+            {
+              title: "Effets circulant sous l'endos de l'entreprise",
+              numero: [nbClasse, 4, 5],
+              comptes: [
+                {
+                  title: "Effets circulant sous l'endos de l'entreprise",
+                  numero: [nbClasse, 4, 5, 1]
+                },
+                {
+                  title:
+                    "Débiteurs pour effets circulant sous l'endos de l'entreprise",
+                  numero: [nbClasse, 4, 5, 9]
+                }
+              ]
+            },
+            {
+              title: 'Engagements donnés pour prêts consentis',
+              numero: [nbClasse, 4, 6],
+              comptes: [
+                {
+                  title: 'Prêts consentis non encore versés',
+                  numero: [nbClasse, 4, 6, 1]
+                },
+                {
+                  title: 'Débiteurs pour prêts consentis non encore versés',
+                  numero: [nbClasse, 4, 6, 9]
+                }
+              ]
+            },
+            {
+              title: 'Autres engagements donnés',
+              numero: [nbClasse, 4, 8],
+              comptes: [
+                {
+                  title: 'Autres engagements donnés',
+                  numero: [nbClasse, 4, 8, 1]
+                },
+                {
+                  title: 'Débiteurs pour autres engagements donnés',
+                  numero: [nbClasse, 4, 8, 9]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Engagements reçus',
+          numero: [nbClasse, 5],
+          postes: [
+            {
+              title: 'Avals, cautions et garanties reçus',
+              numero: [nbClasse, 5, 1],
+              comptes: [
+                {
+                  title: 'Avals, cautions et garanties reçus',
+                  numero: [nbClasse, 5, 1, 1]
+                },
+                {
+                  title: 'Créditeurs pour avals, cautions et garanties reçus',
+                  numero: [nbClasse, 5, 1, 9]
+                }
+              ]
+            },
+            {
+              title: "Biens détenus en garantie par l'entreprise",
+              numero: [nbClasse, 5, 5],
+              comptes: [
+                {
+                  title: "Bien détenus en garantie par l'entreprise",
+                  numero: [nbClasse, 5, 5, 1]
+                },
+                {
+                  title:
+                    "Créditeurs pour biens déténus en garantie par l'entreprise",
+                  numero: [nbClasse, 5, 5, 9]
+                }
+              ]
+            },
+            {
+              title: 'Engagements reçus sur dettes de financement',
+              numero: [nbClasse, 5, 6],
+              comptes: [
+                {
+                  title: 'Emprunts non encore encaissés',
+                  numero: [nbClasse, 5, 6, 1]
+                },
+                {
+                  title: 'Créditeurs pour engagements non encore encaissés',
+                  numero: [nbClasse, 5, 6, 9]
+                }
+              ]
+            },
+            {
+              title: 'Engagements reçus sur trésorerie',
+              numero: [nbClasse, 5, 7],
+              comptes: [
+                {
+                  title: 'Montant non utilisé des découverts autorisés',
+                  numero: [nbClasse, 5, 7, 1]
+                },
+                {
+                  title: "Plafond d'escomptes non utilisé",
+                  numero: [nbClasse, 5, 7, 2]
+                },
+                {
+                  title: 'Créditeurs pour engagements reçus sur trésorerie',
+                  numero: [nbClasse, 5, 7, 9]
+                }
+              ]
+            },
+            {
+              title: 'Autres engagements reçus',
+              numero: [nbClasse, 5, 8],
+              comptes: [
+                {
+                  title: 'Autres engagements reçus',
+                  numero: [nbClasse, 5, 8, 1]
+                },
+                {
+                  title: 'Crédits pour autres engagements reçus',
+                  numero: [nbClasse, 5, 8, 9]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Engagements sur opérations de crédit-bail',
+          numero: [nbClasse, 6],
+          postes: [
+            {
+              title: 'Redevances de crédit-bail restant à courir',
+              numero: [nbClasse, 6, 1],
+              comptes: [
+                {
+                  title: 'Redevances de crédit-bail restant à courir',
+                  numero: [nbClasse, 6, 1, 1]
+                },
+                {
+                  title:
+                    'Débiteurs pour redevances de crédit-bail restant à courir',
+                  numero: [nbClasse, 6, 1, 9]
+                }
+              ]
+            },
+            {
+              title: 'Engagements reçus pour utilisation en crédit-bail',
+              numero: [nbClasse, 6, 5],
+              comptes: [
+                {
+                  title: 'Engagements reçus pour utilisation en crédit-bail',
+                  numero: [nbClasse, 6, 5, 1]
+                },
+                {
+                  title:
+                    'Créditeurs pour engagements reçus p. utilisation en crédit-bail',
+                  numero: [nbClasse, 6, 5, 9]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Autres comptes spéciaux',
+          numero: [nbClasse, 8],
+          postes: [
+            {
+              title: 'Autres comptes spéciaux',
+              numero: [nbClasse, 8, 1],
+              comptes: [
+                {
+                  title: 'Autres comptes spéciaux',
+                  numero: [nbClasse, 8, 1, 1]
+                },
+                {
+                  title: 'Contrepartie des autres comptes spéciaux',
+                  numero: [nbClasse, 8, 1, 9]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   }
 
   return current[nbClasse]
