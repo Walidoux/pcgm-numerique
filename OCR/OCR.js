@@ -1,7 +1,9 @@
 const fs = require('node:fs')
+const path = require('node:path')
 
 const { recognize } = require('tesseract.js')
 
+const DIST_FOLDER = path.join(__dirname, '/dist')
 const ELEMENTS = ['rubriques', 'postes', 'comptes', 'sous_comptes']
 
 const identifyElement = (nbRef) => {
@@ -59,13 +61,13 @@ const rubriqueReader = (lines) => {
     } else return null
 
     switch (instance) {
-      case ELEMENTS[1]:
+      case ELEMENTS[0]:
         return CODE.rubriques.push({ title: nextLine, numero: numberRef })
-      case ELEMENTS[2]:
+      case ELEMENTS[1]:
         return CODE.postes.push({ title: nextLine, numero: numberRef })
-      case ELEMENTS[3]:
+      case ELEMENTS[2]:
         return CODE.comptes.push({ title: nextLine, numero: numberRef })
-      case ELEMENTS[4]:
+      case ELEMENTS[3]:
         return CODE.sous_comptes.push({ title: nextLine, numero: numberRef })
       default:
         throw new Error('Something went wrong')
@@ -74,12 +76,20 @@ const rubriqueReader = (lines) => {
 }
 
 const writeCODE = async () => {
-  await recognizeOCR('../../public/OCR.png')
+  await recognizeOCR('./OCR.png')
 
-  fs.appendFile('OUTPUT.json', `${JSON.stringify(CODE)}`, (err) => {
-    if (err) throw new Error('Something went wrong')
-    console.log('Appended!')
-  })
+  if (!fs.existsSync(DIST_FOLDER))
+    fs.mkdirSync(DIST_FOLDER, { recursive: true })
+  console.log(DIST_FOLDER.concat('/outputfile'))
+
+  fs.appendFile(
+    DIST_FOLDER.concat('/OUTPUT.json'),
+    `${JSON.stringify(CODE)}`,
+    (err) => {
+      if (err) throw new Error('Something went wrong')
+      console.log('Appended!')
+    }
+  )
 }
 
 writeCODE()
