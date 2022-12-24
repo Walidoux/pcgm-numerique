@@ -25,6 +25,9 @@ jobs:
       - name: Linting prettier
         run: yarn lint:prettier
 
+      - name: Linting eslint
+        run: yarn lint:eslint
+
       - name: Checking editorconfig
         run: yarn lint:editorconfig
 
