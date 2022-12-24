@@ -55,10 +55,11 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
-        "resizable": true,
+        "height": 900,
+        "resizable": false,
         "title": "pcgm-num",
-        "width": 800
+        "width": 550,
+        "decorations": false
       }
     ]
   }
