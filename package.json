@@ -14,6 +14,7 @@
     "semantic-release": "release --branches main",
     "check-types": "tsc --noemit",
     "lint:editorconfig": "editorconfig-checker",
+    "lint:eslint": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-path \".gitignore\"",
     "lint:prettier": "prettier \".\" --check --ignore-unknown '!**/*.hbs' --ignore-path \".gitignore\""
   },
   "dependencies": {
@@ -21,9 +22,10 @@
     "@fontsource/poppins": "^4.5.10",
     "@tauri-apps/api": "^1.2.0",
     "classnames": "^2.3.2",
-    "framer-motion": "^7.6.18",
+    "framer-motion": "^8.0.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
@@ -31,27 +33,28 @@
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^9.0.1",
-    "@tauri-apps/cli": "^1.2.1",
-    "@types/node": "^18.11.10",
+    "@tauri-apps/cli": "^1.2.2",
+    "@types/node": "^18.11.17",
     "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "@vitejs/plugin-react": "^2.2.0",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.0.0",
     "@walidoux/eslint-config": "^1.0.1",
     "@walidoux/prettier-config": "^1.0.0",
     "autoprefixer": "^10.4.13",
     "editorconfig-checker": "^4.0.2",
-    "eslint": "^8.29.0",
+    "eslint": "^8.30.0",
     "husky": "^8.0.2",
     "nano-staged": "^0.8.0",
     "plop": "^3.1.1",
-    "postcss": "^8.4.19",
-    "prettier": "^2.8.0",
-    "prettier-plugin-tailwindcss": "^0.2.0",
+    "postcss": "^8.4.20",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
     "react-icons": "^4.7.1",
     "semantic-release": "^19.0.5",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.3",
-    "vite": "^3.2.4"
+    "tesseract.js": "^4.0.2",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.3"
   },
   "repository": {
     "type": "git",
@@ -65,8 +68,11 @@
     "ignorePatterns": [
       "out",
       "**/*.config.js",
+      "**/*.config.ts",
       "**/*.d.ts",
-      "plopfile.js"
+      "OCR/OCR.js",
+      "plopfile.js",
+      "src-tauri/target"
     ],
     "rules": {
       "@next/next/no-img-element": "off"
